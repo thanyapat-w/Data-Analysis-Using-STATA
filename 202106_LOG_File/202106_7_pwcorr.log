@@ -1,0 +1,2454 @@
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 21:35:01
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log not found)
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ MB CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thesis\2
+> 02106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ       MB     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+          MB |  -0.0590***  1.0000 
+        CRER |  -0.1703***  0.0046   1.0000 
+CEOBoardMe~r |   0.0588*** -0.0028   0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0099   0.0415***  0.2520***  1.0000 
+    FirmSize |  -0.3207***  0.0052   0.1514*** -0.0608***  0.0403***  1.0000 
+FirmLeverage |  -0.0503***  0.6872*** -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225**  0.0125   0.0443*** -0.0212**  0.0704***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 22:20:35
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_9_CRER_CEOchar_Model.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Interaction-term regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 00:57:35
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, sig
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+             |
+             |
+        CRER |  -0.1703   1.0000 
+             |   0.0000
+             |
+CEOBoardMe~r |   0.0588   0.0620   1.0000 
+             |   0.0000   0.0000
+             |
+Chairmanis~O |   0.0475   0.0415   0.2520   1.0000 
+             |   0.0000   0.0000   0.0000
+             |
+CEOCompens~R |  -0.0246   0.0220   0.1445   0.0725   1.0000 
+             |   0.0052   0.0126   0.0000   0.0000
+             |
+    FirmSize |  -0.3207   0.1514  -0.0608   0.0403   0.1932   1.0000 
+             |   0.0000   0.0000   0.0000   0.0000   0.0000
+             |
+FirmLeverage |  -0.0503  -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+             |   0.0000   0.6339   0.8053   0.2839   0.3475   0.2917
+             |
+         ROA |   0.0225   0.0443  -0.0212   0.0704   0.0889   0.2390   0.0076 
+             |   0.0108   0.0000   0.0160   0.0000   0.0000   0.0000   0.3906
+             |
+
+             |      ROA
+-------------+---------
+         ROA |   1.0000 
+             |
+             |
+
+. exit, clear
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 01:52:03
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1761***  1.0000 
+CEOBoardMe~r |   0.0633***  0.0613***  1.0000 
+Chairmanis~O |   0.0359***  0.0474***  0.2418***  1.0000 
+CEOCompens~R |  -0.0375***  0.0388***  0.1410***  0.0764***  1.0000 
+    FirmSize |  -0.3366***  0.1827*** -0.0657***  0.0517***  0.2082***  1.0000 
+FirmLeverage |  -0.0091  -0.0083   0.0021  -0.0052  -0.0053  -0.0193**  1.0000 
+         ROA |  -0.0389***  0.0787*** -0.0312***  0.0782***  0.1051***  0.2871*** -0.0474***  1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:17:45
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1761***  1.0000 
+CEOBoardMe~r |   0.0633***  0.0613***  1.0000 
+Chairmanis~O |   0.0359***  0.0474***  0.2418***  1.0000 
+CEOCompens~R |  -0.0375***  0.0388***  0.1410***  0.0764***  1.0000 
+    FirmSize |  -0.3366***  0.1827*** -0.0657***  0.0517***  0.2082***  1.0000 
+FirmLeverage |  -0.0091  -0.0083   0.0021  -0.0052  -0.0053  -0.0193**  1.0000 
+         ROA |  -0.0389***  0.0787*** -0.0312***  0.0782***  0.1051***  0.2871*** -0.0474***  1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:31:29
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1718***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0440***  0.2474***  1.0000 
+CEOCompens~R |  -0.0327***  0.0304***  0.1441***  0.0722***  1.0000 
+    FirmSize |  -0.3265***  0.1641*** -0.0624***  0.0436***  0.2032***  1.0000 
+FirmLeverage |  -0.0493*** -0.0045  -0.0021   0.0091   0.0083   0.0095   1.0000 
+         ROA |  -0.0002   0.0595*** -0.0281***  0.0692***  0.0997***  0.2618***  0.0070   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:34:45
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1736***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0449***  0.2470***  1.0000 
+CEOCompens~R |  -0.0357***  0.0327***  0.1431***  0.0725***  1.0000 
+    FirmSize |  -0.3296***  0.1688*** -0.0621***  0.0449***  0.2045***  1.0000 
+FirmLeverage |  -0.0487*** -0.0046  -0.0020   0.0090   0.0082   0.0094   1.0000 
+         ROA |  -0.0153*  0.0638*** -0.0239***  0.0717***  0.1019***  0.2687***  0.0068   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:37:23
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:54:58
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1736***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0449***  0.2470***  1.0000 
+CEOCompens~R |  -0.0357***  0.0327***  0.1431***  0.0725***  1.0000 
+    FirmSize |  -0.3296***  0.1688*** -0.0621***  0.0449***  0.2045***  1.0000 
+FirmLeverage |  -0.0487*** -0.0046  -0.0020   0.0090   0.0082   0.0094   1.0000 
+         ROA |  -0.0153*  0.0638*** -0.0239***  0.0717***  0.1019***  0.2687***  0.0068   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:58:52
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1761***  1.0000 
+CEOBoardMe~r |   0.0633***  0.0613***  1.0000 
+Chairmanis~O |   0.0359***  0.0474***  0.2418***  1.0000 
+CEOCompens~R |  -0.0375***  0.0388***  0.1410***  0.0764***  1.0000 
+    FirmSize |  -0.3366***  0.1827*** -0.0657***  0.0517***  0.2082***  1.0000 
+FirmLeverage |  -0.0091  -0.0083   0.0021  -0.0052  -0.0053  -0.0193**  1.0000 
+         ROA |  -0.0389***  0.0787*** -0.0312***  0.0782***  0.1051***  0.2871*** -0.0474***  1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:01:43
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:06:10
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1718***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0440***  0.2474***  1.0000 
+CEOCompens~R |  -0.0327***  0.0304***  0.1441***  0.0722***  1.0000 
+    FirmSize |  -0.3265***  0.1641*** -0.0624***  0.0436***  0.2032***  1.0000 
+FirmLeverage |  -0.0493*** -0.0045  -0.0021   0.0091   0.0083   0.0095   1.0000 
+         ROA |  -0.0002   0.0595*** -0.0281***  0.0692***  0.0997***  0.2618***  0.0070   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:15:48
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1718***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0440***  0.2474***  1.0000 
+CEOCompens~R |  -0.0327***  0.0304***  0.1441***  0.0722***  1.0000 
+    FirmSize |  -0.3265***  0.1641*** -0.0624***  0.0436***  0.2032***  1.0000 
+FirmLeverage |  -0.0493*** -0.0045  -0.0021   0.0091   0.0083   0.0095   1.0000 
+         ROA |  -0.0002   0.0595*** -0.0281***  0.0692***  0.0997***  0.2618***  0.0070   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:20:53
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:25:55
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1718***  1.0000 
+CEOBoardMe~r |   0.0622***  0.0621***  1.0000 
+Chairmanis~O |   0.0428***  0.0440***  0.2474***  1.0000 
+CEOCompens~R |  -0.0327***  0.0304***  0.1441***  0.0722***  1.0000 
+    FirmSize |  -0.3265***  0.1641*** -0.0624***  0.0436***  0.2032***  1.0000 
+FirmLeverage |  -0.0493*** -0.0045  -0.0021   0.0091   0.0083   0.0095   1.0000 
+         ROA |  -0.0002   0.0595*** -0.0281***  0.0692***  0.0997***  0.2618***  0.0070   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:36:26
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, star(all) s
+> ave(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01
+> , ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.0725***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 18:52:45
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, sta
+> r(all) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05
+> , **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0084   0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. tab IndependentBoardMembers
+
+Independent |
+      Board |
+    Members |      Freq.     Percent        Cum.
+------------+-----------------------------------
+       0.00 |        102        0.79        0.79
+       3.33 |          1        0.01        0.80
+       4.35 |          1        0.01        0.81
+       4.76 |          2        0.02        0.82
+       5.00 |          2        0.02        0.84
+       5.26 |          1        0.01        0.85
+       5.56 |          2        0.02        0.86
+       5.88 |          3        0.02        0.89
+       6.25 |          1        0.01        0.89
+       6.67 |          1        0.01        0.90
+       7.14 |          8        0.06        0.96
+       7.41 |          1        0.01        0.97
+       7.69 |          8        0.06        1.03
+       8.33 |          8        0.06        1.10
+       8.70 |          1        0.01        1.10
+       9.09 |          9        0.07        1.17
+       9.52 |          3        0.02        1.20
+      10.00 |          9        0.07        1.27
+      10.53 |          4        0.03        1.30
+      10.71 |          1        0.01        1.31
+      11.11 |         11        0.09        1.39
+      11.76 |          8        0.06        1.45
+      12.00 |          1        0.01        1.46
+      12.50 |         15        0.12        1.58
+      13.04 |          2        0.02        1.59
+      13.33 |          5        0.04        1.63
+      13.64 |          1        0.01        1.64
+      14.29 |         11        0.09        1.73
+      15.00 |          4        0.03        1.76
+      15.38 |          8        0.06        1.82
+      15.79 |          2        0.02        1.84
+      16.67 |         24        0.19        2.02
+      17.39 |          2        0.02        2.04
+      17.65 |          9        0.07        2.11
+      18.18 |         14        0.11        2.22
+      18.75 |          6        0.05        2.26
+      19.05 |          3        0.02        2.29
+      19.23 |          1        0.01        2.29
+      20.00 |         36        0.28        2.57
+      20.83 |          3        0.02        2.60
+      21.05 |         10        0.08        2.67
+      21.43 |         16        0.12        2.80
+      21.74 |          3        0.02        2.82
+      22.22 |         16        0.12        2.95
+      22.58 |          1        0.01        2.95
+      22.73 |          5        0.04        2.99
+      23.08 |         16        0.12        3.12
+      23.33 |          1        0.01        3.13
+      23.53 |          7        0.05        3.18
+      23.81 |          5        0.04        3.22
+      24.00 |          2        0.02        3.23
+      25.00 |         69        0.54        3.77
+      25.93 |          1        0.01        3.78
+      26.32 |          7        0.05        3.83
+      26.67 |         14        0.11        3.94
+      26.92 |          2        0.02        3.96
+      27.27 |         30        0.23        4.19
+      27.59 |          1        0.01        4.20
+      27.78 |         11        0.09        4.28
+      28.00 |          1        0.01        4.29
+      28.13 |          1        0.01        4.30
+      28.57 |         36        0.28        4.58
+      29.17 |          2        0.02        4.60
+      29.41 |         12        0.09        4.69
+      30.00 |         28        0.22        4.91
+      30.43 |          1        0.01        4.91
+      30.77 |         23        0.18        5.09
+      31.03 |          3        0.02        5.12
+      31.25 |         20        0.16        5.27
+      31.58 |          5        0.04        5.31
+      31.82 |          2        0.02        5.33
+      32.00 |          2        0.02        5.34
+      32.14 |          1        0.01        5.35
+      33.33 |        117        0.91        6.26
+      34.62 |          1        0.01        6.27
+      34.78 |          5        0.04        6.31
+      35.00 |          8        0.06        6.37
+      35.29 |         11        0.09        6.45
+      35.71 |         22        0.17        6.63
+      36.36 |         37        0.29        6.91
+      36.84 |          8        0.06        6.98
+      37.04 |          1        0.01        6.98
+      37.50 |         47        0.37        7.35
+      38.10 |          8        0.06        7.41
+      38.46 |         38        0.30        7.71
+      38.89 |          8        0.06        7.77
+      39.13 |          1        0.01        7.78
+      39.29 |          3        0.02        7.80
+      40.00 |         79        0.61        8.41
+      40.63 |          1        0.01        8.42
+      40.91 |          1        0.01        8.43
+      41.18 |          4        0.03        8.46
+      41.67 |         42        0.33        8.79
+      42.11 |         11        0.09        8.87
+      42.86 |         76        0.59        9.46
+      43.24 |          1        0.01        9.47
+      43.48 |          1        0.01        9.48
+      43.75 |         22        0.17        9.65
+      44.44 |         90        0.70       10.35
+      45.00 |         11        0.09       10.44
+      45.45 |         56        0.44       10.87
+      45.83 |          1        0.01       10.88
+      46.15 |         37        0.29       11.17
+      46.43 |          1        0.01       11.17
+      46.67 |         35        0.27       11.45
+      47.06 |         19        0.15       11.59
+      47.37 |         12        0.09       11.69
+      47.62 |         10        0.08       11.77
+      47.83 |          3        0.02       11.79
+      48.00 |          1        0.01       11.80
+      48.15 |          1        0.01       11.80
+      48.48 |          1        0.01       11.81
+      50.00 |        356        2.77       14.58
+      52.17 |          4        0.03       14.61
+      52.38 |          6        0.05       14.66
+      52.63 |         10        0.08       14.74
+      52.94 |         17        0.13       14.87
+      53.33 |         27        0.21       15.08
+      53.85 |         49        0.38       15.46
+      54.17 |          2        0.02       15.47
+      54.55 |         90        0.70       16.17
+      55.00 |          6        0.05       16.22
+      55.56 |        125        0.97       17.19
+      56.00 |          1        0.01       17.20
+      56.25 |         38        0.30       17.50
+      56.52 |          3        0.02       17.52
+      57.14 |        130        1.01       18.53
+      57.69 |          2        0.02       18.55
+      57.89 |          2        0.02       18.56
+      58.33 |         65        0.51       19.07
+      58.82 |         21        0.16       19.23
+      59.09 |          2        0.02       19.25
+      60.00 |        206        1.60       20.85
+      60.61 |          2        0.02       20.86
+      60.71 |          1        0.01       20.87
+      60.87 |          5        0.04       20.91
+      61.11 |          6        0.05       20.96
+      61.54 |         84        0.65       21.61
+      61.90 |          8        0.06       21.67
+      62.50 |        203        1.58       23.25
+      62.96 |          1        0.01       23.26
+      63.16 |          7        0.05       23.31
+      63.64 |        132        1.03       24.34
+      64.29 |         39        0.30       24.64
+      64.71 |         15        0.12       24.76
+      65.00 |          6        0.05       24.81
+      65.22 |          2        0.02       24.82
+      66.67 |        525        4.08       28.90
+      67.65 |          1        0.01       28.91
+      68.00 |          2        0.02       28.93
+      68.18 |          4        0.03       28.96
+      68.42 |          7        0.05       29.01
+      68.75 |         32        0.25       29.26
+      69.23 |         88        0.68       29.95
+      69.57 |          2        0.02       29.96
+      70.00 |        226        1.76       31.72
+      70.27 |          1        0.01       31.73
+      70.59 |         12        0.09       31.82
+      70.83 |          2        0.02       31.84
+      71.43 |        349        2.71       34.55
+      72.22 |         13        0.10       34.65
+      72.73 |        232        1.80       36.45
+      73.33 |         36        0.28       36.73
+      73.68 |          5        0.04       36.77
+      73.91 |          1        0.01       36.78
+      75.00 |        637        4.95       41.73
+      75.86 |          1        0.01       41.74
+      76.00 |          1        0.01       41.75
+      76.19 |          5        0.04       41.79
+      76.47 |         12        0.09       41.88
+      76.92 |        172        1.34       43.22
+      77.78 |        504        3.92       47.14
+      78.26 |          1        0.01       47.15
+      78.57 |        116        0.90       48.05
+      78.95 |          8        0.06       48.11
+      80.00 |        714        5.55       53.66
+      80.77 |          1        0.01       53.67
+      80.95 |          5        0.04       53.71
+      81.25 |         39        0.30       54.01
+      81.82 |        458        3.56       57.57
+      82.14 |          1        0.01       57.58
+      82.35 |         24        0.19       57.77
+      83.33 |        582        4.53       62.29
+      84.21 |          5        0.04       62.33
+      84.62 |        260        2.02       64.35
+      85.00 |          6        0.05       64.40
+      85.19 |          1        0.01       64.41
+      85.71 |        594        4.62       69.03
+      86.36 |          1        0.01       69.04
+      86.67 |         87        0.68       69.71
+      87.10 |          1        0.01       69.72
+      87.50 |        551        4.28       74.00
+      88.00 |          1        0.01       74.01
+      88.24 |         21        0.16       74.18
+      88.46 |          2        0.02       74.19
+      88.89 |        831        6.46       80.65
+      89.47 |          5        0.04       80.69
+      90.00 |        702        5.46       86.15
+      90.48 |          3        0.02       86.17
+      90.91 |        607        4.72       90.89
+      91.30 |          1        0.01       90.90
+      91.67 |        392        3.05       93.95
+      92.00 |          1        0.01       93.96
+      92.31 |        274        2.13       96.09
+      92.86 |        152        1.18       97.27
+      93.33 |         75        0.58       97.85
+      93.75 |         38        0.30       98.15
+      94.12 |         16        0.12       98.27
+      94.44 |          6        0.05       98.32
+      94.74 |          1        0.01       98.33
+      95.00 |          1        0.01       98.34
+      95.24 |          3        0.02       98.36
+      95.45 |          3        0.02       98.38
+      96.00 |          1        0.01       98.39
+     100.00 |        207        1.61      100.00
+------------+-----------------------------------
+      Total |     12,860      100.00
+
+. sum IndependentBoardMembers
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+Independen~s |     12,860    73.43167    19.77906          0        100
+
+. stem IndependentBoardMembers
+
+Stem-and-leaf plot for IndependentBoardMembers (Independent Board Members)
+
+IndependentBoardMembers rounded to nearest multiple of .1
+plot in units of .1
+
+    0* | 000000000000000000000000000000000000000000000000000000000000 ... (102)
+    0. | 
+    1* | 
+    1. | 
+    2* | 
+    2. | 
+    3* | 3
+    3. | 
+    4* | 3
+    4. | 88
+    5* | 003
+    5. | 66999
+    6* | 3
+    6. | 7
+    7* | 111111114
+    7. | 77777777
+    8* | 33333333
+    8. | 7
+    9* | 111111111
+    9. | 555
+   10* | 000000000
+   10. | 55557
+   11* | 11111111111
+   11. | 88888888
+   12* | 0
+   12. | 555555555555555
+   13* | 0033333
+   13. | 6
+   14* | 33333333333
+   14. | 
+   15* | 000044444444
+   15. | 88
+   16* | 
+   16. | 777777777777777777777777
+   17* | 44
+   17. | 666666666
+   18* | 22222222222222
+   18. | 888888
+   19* | 0002
+   19. | 
+   20* | 000000000000000000000000000000000000
+   20. | 888
+   21* | 11111111114444444444444444
+   21. | 777
+   22* | 2222222222222222
+   22. | 677777
+   23* | 11111111111111113
+   23. | 555555588888
+   24* | 00
+   24. | 
+   25* | 000000000000000000000000000000000000000000000000000000000000000000000
+   25. | 9
+   26* | 3333333
+   26. | 7777777777777799
+   27* | 333333333333333333333333333333
+   27. | 688888888888
+   28* | 01
+   28. | 666666666666666666666666666666666666
+   29* | 22444444444444
+   29. | 
+   30* | 00000000000000000000000000004
+   30. | 88888888888888888888888
+   31* | 00033333333333333333333
+   31. | 6666688
+   32* | 001
+   32. | 
+   33* | 333333333333333333333333333333333333333333333333333333333333 ... (117)
+   33. | 
+   34* | 
+   34. | 688888
+   35* | 0000000033333333333
+   35. | 7777777777777777777777
+   36* | 4444444444444444444444444444444444444
+   36. | 88888888
+   37* | 0
+   37. | 55555555555555555555555555555555555555555555555
+   38* | 11111111
+   38. | 5555555555555555555555555555555555555599999999
+   39* | 1333
+   39. | 
+   40* | 0000000000000000000000000000000000000000000000000000000000000 ... (79)
+   40. | 69
+   41* | 2222
+   41. | 777777777777777777777777777777777777777777
+   42* | 11111111111
+   42. | 9999999999999999999999999999999999999999999999999999999999999 ... (76)
+   43* | 2
+   43. | 58888888888888888888888
+   44* | 4444444444444444444444444444444444444444444444444444444444444 ... (90)
+   44. | 
+   45* | 00000000000
+   45. | 555555555555555555555555555555555555555555555555555555558
+   46* | 22222222222222222222222222222222222224
+   46. | 77777777777777777777777777777777777
+   47* | 1111111111111111111444444444444
+   47. | 6666666666888
+   48* | 01
+   48. | 5
+   49* | 
+   49. | 
+   50* | 000000000000000000000000000000000000000000000000000000000000 ... (356)
+   50. | 
+   51* | 
+   51. | 
+   52* | 2222444444
+   52. | 666666666699999999999999999
+   53* | 333333333333333333333333333
+   53. | 8888888888888888888888888888888888888888888888888
+   54* | 22
+   54. | 5555555555555555555555555555555555555555555555555555555555555 ... (90)
+   55* | 000000
+   55. | 666666666666666666666666666666666666666666666666666666666666 ... (125)
+   56* | 033333333333333333333333333333333333333
+   56. | 555
+   57* | 111111111111111111111111111111111111111111111111111111111111 ... (130)
+   57. | 7799
+   58* | 33333333333333333333333333333333333333333333333333333333333333333
+   58. | 888888888888888888888
+   59* | 11
+   59. | 
+   60* | 000000000000000000000000000000000000000000000000000000000000 ... (206)
+   60. | 66799999
+   61* | 111111
+   61. | 5555555555555555555555555555555555555555555555555555555555555 ... (92)
+   62* | 
+   62. | 555555555555555555555555555555555555555555555555555555555555 ... (203)
+   63* | 02222222
+   63. | 666666666666666666666666666666666666666666666666666666666666 ... (132)
+   64* | 333333333333333333333333333333333333333
+   64. | 777777777777777
+   65* | 00000022
+   65. | 
+   66* | 
+   66. | 777777777777777777777777777777777777777777777777777777777777 ... (525)
+   67* | 
+   67. | 6
+   68* | 0022224444444
+   68. | 88888888888888888888888888888888
+   69* | 2222222222222222222222222222222222222222222222222222222222222 ... (88)
+   69. | 66
+   70* | 000000000000000000000000000000000000000000000000000000000000 ... (227)
+   70. | 66666666666688
+   71* | 444444444444444444444444444444444444444444444444444444444444 ... (349)
+   71. | 
+   72* | 2222222222222
+   72. | 777777777777777777777777777777777777777777777777777777777777 ... (232)
+   73* | 333333333333333333333333333333333333
+   73. | 777779
+   74* | 
+   74. | 
+   75* | 000000000000000000000000000000000000000000000000000000000000 ... (637)
+   75. | 9
+   76* | 022222
+   76. | 555555555555999999999999999999999999999999999999999999999999 ... (184)
+   77* | 
+   77. | 888888888888888888888888888888888888888888888888888888888888 ... (504)
+   78* | 3
+   78. | 666666666666666666666666666666666666666666666666666666666666 ... (124)
+   79* | 
+   79. | 
+   80* | 000000000000000000000000000000000000000000000000000000000000 ... (714)
+   80. | 8
+   81* | 00000333333333333333333333333333333333333333
+   81. | 888888888888888888888888888888888888888888888888888888888888 ... (458)
+   82* | 1444444444444444444444444
+   82. | 
+   83* | 333333333333333333333333333333333333333333333333333333333333 ... (582)
+   83. | 
+   84* | 22222
+   84. | 666666666666666666666666666666666666666666666666666666666666 ... (260)
+   85* | 0000002
+   85. | 777777777777777777777777777777777777777777777777777777777777 ... (594)
+   86* | 4
+   86. | 7777777777777777777777777777777777777777777777777777777777777 ... (87)
+   87* | 1
+   87. | 555555555555555555555555555555555555555555555555555555555555 ... (551)
+   88* | 0222222222222222222222
+   88. | 559999999999999999999999999999999999999999999999999999999999 ... (833)
+   89* | 
+   89. | 55555
+   90* | 000000000000000000000000000000000000000000000000000000000000 ... (702)
+   90. | 555999999999999999999999999999999999999999999999999999999999 ... (610)
+   91* | 3
+   91. | 777777777777777777777777777777777777777777777777777777777777 ... (392)
+   92* | 033333333333333333333333333333333333333333333333333333333333 ... (275)
+   92. | 999999999999999999999999999999999999999999999999999999999999 ... (152)
+   93* | 3333333333333333333333333333333333333333333333333333333333333 ... (75)
+   93. | 88888888888888888888888888888888888888
+   94* | 1111111111111111444444
+   94. | 7
+   95* | 0222
+   95. | 555
+   96* | 0
+   96. | 
+   97* | 
+   97. | 
+   98* | 
+   98. | 
+   99* | 
+   99. | 
+  100* | 000000000000000000000000000000000000000000000000000000000000 ... (207)
+
+. hist IndependentBoardMembers, freq normal
+(bin=41, start=0, width=2.4390244)
+
+. do "C:\Users\GL\AppData\Local\Temp\STDfac_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Interaction-term regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:05:07
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, sta
+> r(all) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05
+> , **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0084   0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:32:25
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOChairmanSeparation CEOCompensationLinktoTSR FirmSize
+>  FirmLeverage ROA, star(all) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label 
+> replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCha~n CEOCom~R FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOChairma~n |   0.0329***  0.0522***  0.2885***  0.0855***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  0.0701***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.0924***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0198**  0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0084   0.0940***  0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STDfac_000000.tmp"
+
+.         /************************************\
+>           CRER with IndependentBoardMembers
+>         \************************************/
+.                 gen CRER_IndependentBoardMembers = CRER*CEOChairmanSeparation
+(1 missing value generated)
+
+.                 asdoc reg TobinQ CRER CEOChairmanSeparation CRER_IndependentBoardMembers FirmSize FirmLeverage ROA, add
+> (Industry FE, No, Country FE, No) dec(3) title(Interaction-term regression: CRER with IndependentBoardMembers) save(D:\
+> Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel.doc) label nest repla
+> ce setstars(*@.05, **@.01, ***@.001)
+
+      Source |       SS           df       MS      Number of obs   =    12,869
+-------------+----------------------------------   F(6, 12862)     =    334.43
+       Model |  6906.20602         6  1151.03434   Prob > F        =    0.0000
+    Residual |  44267.6476    12,862  3.44173905   R-squared       =    0.1350
+-------------+----------------------------------   Adj R-squared   =    0.1346
+       Total |  51173.8536    12,868   3.9768304   Root MSE        =    1.8552
+
+----------------------------------------------------------------------------------------------
+                      TobinQ |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------------+----------------------------------------------------------------
+                        CRER |  -1.889459   .1656793   -11.40   0.000    -2.214215   -1.564703
+       CEOChairmanSeparation |   .1968121   .0448883     4.38   0.000     .1088244    .2847998
+CRER_IndependentBoardMembers |   .3565836   .2183594     1.63   0.102    -.0714333    .7846004
+                    FirmSize |  -.3768002   .0097454   -38.66   0.000    -.3959027   -.3576977
+                FirmLeverage |   -.002362   .0003904    -6.05   0.000    -.0031271   -.0015968
+                         ROA |   1.354871   .1122636    12.07   0.000     1.134818    1.574925
+                       _cons |   10.71287   .2151522    49.79   0.000     10.29114     11.1346
+----------------------------------------------------------------------------------------------
+  
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel
+> .doc
+
+.                 asdoc reg TobinQ CRER CEOChairmanSeparation CRER_IndependentBoardMembers FirmSize FirmLeverage ROA i.In
+> dus, add(Industry FE, Yes, Country FE, No) drop(i.Indus) dec(3) title(Interaction-term regression: CRER with Independen
+> tBoardMembers) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersMode
+> l.doc) label nest setstars(*@.05, **@.01, ***@.001)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel.doc already ex
+> ists, option append was assumed)
+
+      Source |       SS           df       MS      Number of obs   =    12,869
+-------------+----------------------------------   F(14, 12854)    =    230.71
+       Model |  10276.5682        14  734.040589   Prob > F        =    0.0000
+    Residual |  40897.2854    12,854  3.18167772   R-squared       =    0.2008
+-------------+----------------------------------   Adj R-squared   =    0.1999
+       Total |  51173.8536    12,868   3.9768304   Root MSE        =    1.7837
+
+----------------------------------------------------------------------------------------------
+                      TobinQ |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------------+----------------------------------------------------------------
+                        CRER |   -.854985   .1779069    -4.81   0.000    -1.203709    -.506261
+       CEOChairmanSeparation |   .1822089   .0432512     4.21   0.000       .09743    .2669877
+CRER_IndependentBoardMembers |   .1499088   .2103901     0.71   0.476    -.2624871    .5623048
+                    FirmSize |  -.3179531   .0099233   -32.04   0.000    -.3374041    -.298502
+                FirmLeverage |  -.0022755   .0003756    -6.06   0.000    -.0030117   -.0015393
+                         ROA |   1.795895   .1124946    15.96   0.000     1.575389    2.016401
+                             |
+                       Indus |
+                          3  |   .5686527   .0727886     7.81   0.000     .4259763    .7113292
+                          4  |   .8450459   .0852352     9.91   0.000     .6779722     1.01212
+                          5  |  -.0901805   .1074837    -0.84   0.401    -.3008645    .1205035
+                          6  |   .1181184   .0798499     1.48   0.139    -.0383993    .2746361
+                          7  |   1.585883   .0768572    20.63   0.000     1.435231    1.736534
+                          8  |   .2458215   .0723519     3.40   0.001     .1040011     .387642
+                          9  |   1.221759   .0741842    16.47   0.000     1.076347    1.367171
+                         10  |   .0124747   .1109964     0.11   0.911    -.2050948    .2300442
+                             |
+                       _cons |   8.644129   .2302321    37.55   0.000      8.19284    9.095418
+----------------------------------------------------------------------------------------------
+  
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel
+> .doc
+
+.                 asdoc reg TobinQ CRER CEOChairmanSeparation CRER_IndependentBoardMembers FirmSize FirmLeverage ROA i.Re
+> gion, add(Industry FE, No, Country FE, Yes) drop(i.Region) dec(3) title(Interaction-term regression: CRER with Independ
+> entBoardMembers) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersMo
+> del.doc) label nest setstars(*@.05, **@.01, ***@.001)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel.doc already ex
+> ists, option append was assumed)
+
+      Source |       SS           df       MS      Number of obs   =    12,869
+-------------+----------------------------------   F(7, 12861)     =    304.40
+       Model |  7273.29601         7  1039.04229   Prob > F        =    0.0000
+    Residual |  43900.5576    12,861  3.41346378   R-squared       =    0.1421
+-------------+----------------------------------   Adj R-squared   =    0.1417
+       Total |  51173.8536    12,868   3.9768304   Root MSE        =    1.8476
+
+----------------------------------------------------------------------------------------------
+                      TobinQ |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------------+----------------------------------------------------------------
+                        CRER |  -2.089585    .166122   -12.58   0.000    -2.415209   -1.763961
+       CEOChairmanSeparation |   .1009475   .0456493     2.21   0.027     .0114681     .190427
+CRER_IndependentBoardMembers |   .3914855   .2174867     1.80   0.072    -.0348207    .8177916
+                    FirmSize |  -.3497961   .0100486   -34.81   0.000    -.3694928   -.3300993
+                FirmLeverage |  -.0023291   .0003888    -5.99   0.000    -.0030911    -.001567
+                         ROA |   1.373816   .1118164    12.29   0.000     1.154639    1.592993
+                    1.Region |  -.4239956   .0408858   -10.37   0.000    -.5041379   -.3438533
+                       _cons |   10.29117   .2180912    47.19   0.000     9.863683    10.71866
+----------------------------------------------------------------------------------------------
+  
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel
+> .doc
+
+.                 asdoc reg TobinQ CRER CEOChairmanSeparation CRER_IndependentBoardMembers FirmSize FirmLeverage ROA i.In
+> dus i.Region, add(Industry FE, Yes, Country FE, Yes) drop(i.Indus i.Region) dec(3) title(Interaction-term regression: C
+> RER with IndependentBoardMembers) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_Independ
+> entBoardMembersModel.doc) label nest setstars(*@.05, **@.01, ***@.001)]
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel.doc already ex
+> ists, option append was assumed)
+
+      Source |       SS           df       MS      Number of obs   =    12,869
+-------------+----------------------------------   F(15, 12853)    =    219.28
+       Model |  10427.4258        15  695.161719   Prob > F        =    0.0000
+    Residual |  40746.4279    12,853  3.17018812   R-squared       =    0.2038
+-------------+----------------------------------   Adj R-squared   =    0.2028
+       Total |  51173.8536    12,868   3.9768304   Root MSE        =    1.7805
+
+----------------------------------------------------------------------------------------------
+                      TobinQ |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------------+----------------------------------------------------------------
+                        CRER |  -.9975496   .1787839    -5.58   0.000    -1.347993   -.6471066
+       CEOChairmanSeparation |   .1188571    .044139     2.69   0.007      .032338    .2053762
+CRER_IndependentBoardMembers |   .1788865   .2100519     0.85   0.394    -.2328465    .5906195
+                    FirmSize |  -.3006801   .0102169   -29.43   0.000    -.3207068   -.2806535
+                FirmLeverage |  -.0022587   .0003749    -6.02   0.000    -.0029936   -.0015239
+                         ROA |   1.796875   .1122914    16.00   0.000     1.576767    2.016982
+                             |
+                       Indus |
+                          3  |   .5526336   .0726941     7.60   0.000     .4101423    .6951249
+                          4  |   .8302648   .0851081     9.76   0.000     .6634402    .9970894
+                          5  |  -.0850402    .107292    -0.79   0.428    -.2953486    .1252681
+                          6  |   .0952749   .0797744     1.19   0.232    -.0610947    .2516445
+                          7  |   1.551014   .0768847    20.17   0.000     1.400309     1.70172
+                          8  |   .2443145   .0722215     3.38   0.001     .1027497    .3858793
+                          9  |   1.168439   .0744525    15.69   0.000     1.022501    1.314377
+                         10  |   -.020011   .1108959    -0.18   0.857    -.2373833    .1973614
+                             |
+                    1.Region |  -.2754432   .0399292    -6.90   0.000    -.3537104    -.197176
+                       _cons |   8.399795   .2325295    36.12   0.000     7.944003    8.855587
+----------------------------------------------------------------------------------------------
+  
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_9_CRER_IndependentBoardMembersModel
+> .doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_0_Master.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 01 June 2021
+>   Description  : This is a master-do files of Grace's master thesis.
+>                                  Included all process about the data.
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:49:26
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOCompensationLinktoTSR FirmSize FirmLeverage ROA, sta
+> r(all) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05
+> , **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCom~R FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0083   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0084   0.0889***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 00:53:34
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOCompensationLinktoTSR FirmSize FirmLeverage, star(al
+> l) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **
+> @.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCom~R FirmSize FirmLe~e
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 01:33:13
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember IndependentBoardMembers CEOCompensationLinktoTSR FirmSize FirmLeverage, star(al
+> l) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **
+> @.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Indepe~s CEOCom~R FirmSize FirmLe~e
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Independen~s |   0.0817***  0.0483***  0.2483***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  0.3056***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608*** -0.0238***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022  -0.0026   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 02:28:14
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. exit, clear
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:22:42
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:43:39
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   9 Jun 2021, 23:36:17
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   1 Jul 2021, 14:29:59
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   1 Jul 2021, 22:28:52
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   2 Jul 2021, 15:38:09
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   2 Jul 2021, 16:14:33
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:12:53
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_7_pwcorr.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:28:46
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_7_pwcorrcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Correlation table
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, star(all) save(D:\Master Thesis
+> \202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r CEOCom~R FirmSize FirmLe~e
+-------------+------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+CEOCompens~R |  -0.0246***  0.0220**  0.1445***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.1932***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0083   0.0093   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 8. Baseline model
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_8_BaselineModel.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Baseline Model
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close

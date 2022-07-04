@@ -1,0 +1,3314 @@
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   5 Jun 2021, 21:04:02
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log not found)
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\DataAnalysis_202105\5_ManageVariables\ManageVariables_DTA_File\EU_US_Clean_Dataset.dta"
+
+. 
+. asdoc sum TobinQ MB CRER Firm_Size Firm_Leverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Re
+> sults\202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |      2,977    2.470722    2.397446   .2941868   22.57482
+          MB |      2,977   -27.34454    1290.088  -67830.78   295.8746
+        CRER |      2,977    .0745923    .1016047    .005006   .7190509
+   Firm_Size |      2,977     22.0643    1.714908   16.50939   28.74261
+Firm_Lever~e |      2,977   -1.532791    72.09718  -3125.345   561.3929
+-------------+---------------------------------------------------------
+         ROA |      2,977   -.0000494    .1825453  -2.266521   .8185186
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_2_Append.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : This do file will append(combine) all industrial in to one file
+>                                  By the way, I will separate it into two file: EU_US_Dataset_202106
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   5 Jun 2021, 21:05:57
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ MB CRER Firm_Size Firm_Leverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Re
+> sults\202106_6_DescriptiveStat.doc) replace
+variable Firm_Size not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD544_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   5 Jun 2021, 21:06:30
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ MB CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Resu
+> lts\202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+          MB |     12,870    -1.96769      600.06  -67830.78   1590.526
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+-------------+---------------------------------------------------------
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD544_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   6 Jun 2021, 01:52:03
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,815    2.278262    2.044593   .2941868   41.96585
+        CRER |     13,815    .1308435     .150241   .0000235   .9282534
+    FirmSize |     13,815    22.14658    1.791095   15.48262   28.74261
+FirmLeverage |     13,815    1.594511    130.1831  -3125.345   14543.43
+         ROA |     13,815    .0119409    .1781242  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:17:45
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,815    2.278262    2.044593   .2941868   41.96585
+        CRER |     13,815    .1308435     .150241   .0000235   .9282534
+    FirmSize |     13,815    22.14658    1.791095   15.48262   28.74261
+FirmLeverage |     13,815    1.594511    130.1831  -3125.345   14543.43
+         ROA |     13,815    .0119409    .1781242  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:33:00
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,293    2.247778    2.010969   .2941868   41.96585
+        CRER |     13,293    .1358851    .1509503   .0050031   .9282534
+    FirmSize |     13,293    22.20134    1.767178   15.48262   28.74261
+FirmLeverage |     13,293    .5338558    41.23731  -3125.345   2131.513
+         ROA |     13,293    .0173383    .1635491  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD2c0c_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:34:45
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,392    2.258477    2.030712   .2941868   41.96585
+        CRER |     13,392    .1349139    .1508118   .0040083   .9282534
+    FirmSize |     13,392    22.18857    1.772414   15.48262   28.74261
+FirmLeverage |     13,392    .5387268    41.08539  -3125.345   2131.513
+         ROA |     13,392    .0161693    .1674339  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:37:23
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:54:57
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,392    2.258477    2.030712   .2941868   41.96585
+        CRER |     13,392    .1349139    .1508118   .0040083   .9282534
+    FirmSize |     13,392    22.18857    1.772414   15.48262   28.74261
+FirmLeverage |     13,392    .5387268    41.08539  -3125.345   2131.513
+         ROA |     13,392    .0161693    .1674339  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:58:52
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,815    2.278262    2.044593   .2941868   41.96585
+        CRER |     13,815    .1308435     .150241   .0000235   .9282534
+    FirmSize |     13,815    22.14658    1.791095   15.48262   28.74261
+FirmLeverage |     13,815    1.594511    130.1831  -3125.345   14543.43
+         ROA |     13,815    .0119409    .1781242  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:01:43
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:06:09
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,293    2.247778    2.010969   .2941868   41.96585
+        CRER |     13,293    .1358851    .1509503   .0050031   .9282534
+    FirmSize |     13,293    22.20134    1.767178   15.48262   28.74261
+FirmLeverage |     13,293    .5338558    41.23731  -3125.345   2131.513
+         ROA |     13,293    .0173383    .1635491  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:15:48
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,293    2.247778    2.010969   .2941868   41.96585
+        CRER |     13,293    .1358851    .1509503   .0050031   .9282534
+    FirmSize |     13,293    22.20134    1.767178   15.48262   28.74261
+FirmLeverage |     13,293    .5338558    41.23731  -3125.345   2131.513
+         ROA |     13,293    .0173383    .1635491  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:20:53
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:25:55
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     13,293    2.247778    2.010969   .2941868   41.96585
+        CRER |     13,293    .1358851    .1509503   .0050031   .9282534
+    FirmSize |     13,293    22.20134    1.767178   15.48262   28.74261
+FirmLeverage |     13,293    .5338558    41.23731  -3125.345   2131.513
+         ROA |     13,293    .0173383    .1635491  -5.106613   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:36:26
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:05:07
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:49:26
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage ROA , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results
+> \202106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+         ROA |     12,870    .0211393    .1505256  -3.558769   2.073339
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 00:53:34
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202
+> 106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 01:33:13
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202
+> 106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:00:36
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202
+> 106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. bysort Region: TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Result
+> s\202106_6_1DescriptiveStat.doc) replace stat(N mean min max tstat)
+command TobinQ is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:01:05
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202
+> 106_6_DescriptiveStat.doc) replace
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |     12,870     2.22982     1.99413   .2941868   41.96585
+        CRER |     12,870    .1401223    .1515608   .0090005   .9282534
+    FirmSize |     12,870    22.23915    1.750615   15.63995   28.74261
+FirmLeverage |     12,870    .5178435    41.90648  -3125.345   2131.513
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. bysort Region: asdoc tabstat TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\20210
+> 6_Table_Results\202106_6_1DescriptiveStat.doc) replace stat(N mean min max tstat)
+
+Summary statistics: N, mean, min, max
+  by categories of: Region 
+
+  Region |    TobinQ      CRER  FirmSize  FirmLe~e
+---------+----------------------------------------
+       0 |      9758      9758      9758      9758
+         |   2.39273  .1506926  22.02354  .3830561
+         |  .3447168  .0090005  15.63995 -3125.345
+         |  36.12864  .9282534  28.30149  2131.513
+---------+----------------------------------------
+       1 |      3112      3112      3112      3112
+         |  1.718998   .106978   22.9152  .9404835
+         |  .2941868  .0090047  17.27875 -263.4583
+         |  41.96585  .6666535  28.74261  35.97222
+---------+----------------------------------------
+   Total |     12870     12870     12870     12870
+         |   2.22982  .1401223  22.23915  .5178435
+         |  .2941868  .0090005  15.63995 -3125.345
+         |  41.96585  .9282534  28.74261  2131.513
+--------------------------------------------------
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_1DescriptiveStat.doc not found)
+  0.34
+  0.01
+  15.64
+  -3125.34
+            asdoctable():  3001  expected 22 arguments but received 21
+                 <istmt>:     -  function returned error
+r(3001);
+
+end of do-file
+
+r(3001);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. bysort Region: asdoc tabstat TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\20210
+> 6_Table_Results\202106_6_1DescriptiveStat.doc) replace stat(N mean sd min max tstat)
+
+Summary statistics: N, mean, sd, min, max
+  by categories of: Region 
+
+  Region |    TobinQ      CRER  FirmSize  FirmLe~e
+---------+----------------------------------------
+       0 |      9758      9758      9758      9758
+         |   2.39273  .1506926  22.02354  .3830561
+         |  2.113571  .1648144   1.68996  48.03359
+         |  .3447168  .0090005  15.63995 -3125.345
+         |  36.12864  .9282534  28.30149  2131.513
+---------+----------------------------------------
+       1 |      3112      3112      3112      3112
+         |  1.718998   .106978   22.9152  .9404835
+         |  1.447346  .0915306  1.765541  5.306196
+         |  .2941868  .0090047  17.27875 -263.4583
+         |  41.96585  .6666535  28.74261  35.97222
+---------+----------------------------------------
+   Total |     12870     12870     12870     12870
+         |   2.22982  .1401223  22.23915  .5178435
+         |   1.99413  .1515608  1.750615  41.90648
+         |  .2941868  .0090005  15.63995 -3125.345
+         |  41.96585  .9282534  28.74261  2131.513
+--------------------------------------------------
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_1DescriptiveStat.doc not found)
+  2.11
+  0.16
+  1.69
+  48.03
+            asdoctable():  3001  expected 22 arguments but received 21
+                 <istmt>:     -  function returned error
+r(3001);
+
+end of do-file
+
+r(3001);
+
+. bysort Region: asdoc tabstat TobinQ CRER FirmSize FirmLeverage ,replace stat(N mean sd min max tstat)
+
+Summary statistics: N, mean, sd, min, max
+  by categories of: Region 
+
+  Region |    TobinQ      CRER  FirmSize  FirmLe~e
+---------+----------------------------------------
+       0 |      9758      9758      9758      9758
+         |   2.39273  .1506926  22.02354  .3830561
+         |  2.113571  .1648144   1.68996  48.03359
+         |  .3447168  .0090005  15.63995 -3125.345
+         |  36.12864  .9282534  28.30149  2131.513
+---------+----------------------------------------
+       1 |      3112      3112      3112      3112
+         |  1.718998   .106978   22.9152  .9404835
+         |  1.447346  .0915306  1.765541  5.306196
+         |  .2941868  .0090047  17.27875 -263.4583
+         |  41.96585  .6666535  28.74261  35.97222
+---------+----------------------------------------
+   Total |     12870     12870     12870     12870
+         |   2.22982  .1401223  22.23915  .5178435
+         |   1.99413  .1515608  1.750615  41.90648
+         |  .2941868  .0090005  15.63995 -3125.345
+         |  41.96585  .9282534  28.74261  2131.513
+--------------------------------------------------
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_1DescriptiveStat.doc not found)
+  2.11
+  0.16
+  1.69
+  48.03
+            asdoctable():  3001  expected 22 arguments but received 21
+                 <istmt>:     -  function returned error
+r(3001);
+
+. asdoc sum, stat(N mean sd min max tstat) by(Region)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_1DescriptiveStat.doc already exists, option appe
+> nd was assumed)
+
+Summary statistics: N, mean, sd, min, max
+  by categories of: Region 
+
+  Region |  Fiscal~r  CashSh~m     ARNet   ARGross       PDA  TotalR~t  TotalI~y  Prepai~s  OtherC~l  PPETot~s  Buildi~s
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      9758      9758      8189      9758      6629      9758      9758      9758      9758      9758      9758
+         |  2016.957  1.48e+09  1.06e+09  7.55e+08 -4.78e+07  1.16e+09  7.67e+08  9.30e+07  3.10e+08  4.35e+09  8.99e+08
+         |  2.670209  6.70e+09  2.60e+09  2.20e+09  3.21e+08  4.96e+09  2.87e+09  3.89e+08  1.89e+09  1.76e+10  4.04e+09
+         |      2011         0  -3480000         0 -1.69e+10         0         0 -4.36e+08  -6818000    878620         0
+         |      2020  1.37e+11  6.44e+10  3.28e+10      -400  3.08e+11  8.17e+10  2.09e+10  6.76e+10  3.58e+11  1.06e+11
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      3112      3112      2747      3112      2059      3112      3112      3112      3112      3112      3112
+         |  2016.161  1.68e+09  1.90e+09  1.27e+09 -1.28e+08  2.24e+09  1.35e+09  8.99e+07  3.97e+08  8.19e+09  6.15e+08
+         |   2.96038  3.66e+09  3.73e+09  3.22e+09  3.61e+08  4.94e+09  3.22e+09  2.54e+08  1.62e+09  1.97e+10  1.98e+09
+         |      2011         0 -1.59e+08         0 -7.42e+09         0         0 -1.27e+08  -1319400   6286127         0
+         |      2020  4.25e+10  5.23e+10  5.41e+10 -7327.797  7.17e+10  3.71e+10  5.81e+09  2.72e+10  2.55e+11  2.46e+10
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     12870     12870     10936     12870      8688     12870     12870     12870     12870     12870     12870
+         |  2016.764  1.53e+09  1.27e+09  8.80e+08 -6.69e+07  1.42e+09  9.08e+08  9.22e+07  3.31e+08  5.28e+09  8.30e+08
+         |  2.764141  6.10e+09  2.95e+09  2.50e+09  3.32e+08  4.98e+09  2.97e+09  3.61e+08  1.83e+09  1.82e+10  3.66e+09
+         |      2011         0 -1.59e+08         0 -1.69e+10         0         0 -4.36e+08  -6818000    878620         0
+         |      2020  1.37e+11  6.44e+10  5.41e+10      -400  3.08e+11  8.17e+10  2.09e+10  6.76e+10  3.58e+11  1.06e+11
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |  LandGr~s  Machin~s  Constr~s  Leases~s  OtherP~s  OtherP~t  PPETot~t   ADTotal  Goodwi~t  Goodwi~s  AccuGo~n
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      9758      9758      9758      9758      9758       241      9758      9758      8568      9758       518
+         |  3.12e+08  2.26e+09  2.02e+08  4.13e+07  5.58e+08  1.59e+09  2.40e+09 -1.99e+09  2.63e+09  1.38e+08 -9.03e+08
+         |  2.23e+09  1.20e+10  9.12e+08  9.04e+08  3.31e+09  6.28e+09  9.60e+09  8.88e+09  7.62e+09  1.30e+09  2.56e+09
+         |         0         0         0         0 -2.57e+07 -8.01e+08    171270 -2.03e+11         0         0 -2.60e+10
+         |  7.76e+10  2.88e+11  2.31e+10  5.00e+10  8.05e+10  4.36e+10  1.87e+11         0  1.46e+11  5.68e+10   -192000
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      3112      3112      3112      3112      3112       651      3112      3112      2917      3112      1584
+         |  1.15e+09  4.70e+09  4.20e+08  6.38e+07  1.04e+09  2.57e+09  4.10e+09 -4.63e+09  3.30e+09  2.06e+09 -6.20e+08
+         |  3.01e+09  1.39e+10  2.05e+09  1.45e+09  2.83e+09  4.91e+10  9.94e+09  2.47e+10  8.20e+09  7.27e+09  2.02e+09
+         |         0         0         0         0 -7.94e+07 -1.46e+08  979447.7 -1.25e+12 -6.47e+07         0 -2.27e+10
+         |  5.33e+10  1.77e+11  4.24e+10  7.65e+10  5.62e+10  1.25e+12  1.17e+11         0  1.41e+11  1.41e+11 -1051.304
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     12870     12870     12870     12870     12870       892     12870     12870     11485     12870      2102
+         |  5.15e+08  2.85e+09  2.55e+08  4.68e+07  6.75e+08  2.30e+09  2.81e+09 -2.62e+09  2.80e+09  6.04e+08 -6.90e+08
+         |  2.47e+09  1.26e+10  1.29e+09  1.06e+09  3.21e+09  4.20e+10  9.71e+09  1.44e+10  7.78e+09  3.84e+09  2.17e+09
+         |         0         0         0         0 -7.94e+07 -8.01e+08    171270 -1.25e+12 -6.47e+07         0 -2.60e+10
+         |  7.76e+10  2.88e+11  4.24e+10  7.65e+10  8.05e+10  1.25e+12  1.87e+11         0  1.46e+11  1.41e+11 -1051.304
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |  Intang~t  Intang~s  AccuIn~n  NoteRe~m  OtherL~l  Total~ts  TotalD~t  Deferr~y  TotalL~s  NetInc~s  BookVa~e
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      8551      9758      7618      9758      9758      9758      9758      9758      9758      9758      9746
+         |  1.59e+09  1.82e+09 -6.68e+08  2.96e+08  6.58e+08  1.74e+10  4.45e+09  5.45e+08  1.27e+10  7.15e+08  203.9234
+         |  7.23e+09  8.18e+09  2.65e+09  4.31e+09  4.36e+09  7.22e+10  1.75e+10  3.17e+09  6.04e+10  2.93e+09  5996.873
+         |         0         0 -6.07e+10         0 -5.96e+09   6199290         0 -1.31e+08    835680 -2.09e+10 -108.3341
+         |  1.64e+11  1.83e+11       -20  2.65e+11  3.36e+11  1.96e+12  4.53e+11  7.65e+10  1.77e+12  8.18e+10  277938.1
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      3069      3112      2880      3112      3112      3112      3112      3112      3112      3112      3099
+         |  1.87e+09  3.25e+09 -1.62e+09  3.23e+08  1.35e+09  5.46e+10  9.61e+09  5.24e+08  4.73e+10  5.84e+08 -304.8127
+         |  4.93e+09  8.16e+09  4.27e+09  2.00e+09  4.52e+09  2.08e+11  2.98e+10  1.44e+09  1.97e+11  1.77e+09  19814.77
+         |         0         0 -6.60e+10  -2569547 -1.49e+09  3.19e+07         0         0   9100709 -1.99e+10 -817229.3
+         |  1.20e+11  1.56e+11 -218595.2  6.75e+10  1.24e+11  3.04e+12  3.22e+11  2.11e+10  2.90e+12  1.75e+10  134619.5
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     11620     12870     10498     12870     12870     12870     12870     12870     12870     12870     12845
+         |  1.66e+09  2.17e+09 -9.29e+08  3.02e+08  8.26e+08  2.64e+10  5.70e+09  5.40e+08  2.11e+10  6.83e+08  81.18514
+         |  6.70e+09  8.19e+09  3.21e+09  3.88e+09  4.41e+09  1.21e+11  2.13e+10  2.85e+09  1.11e+11  2.70e+09  11046.94
+         |         0         0 -6.60e+10  -2569547 -5.96e+09   6199290         0 -1.31e+08    835680 -2.09e+10 -817229.3
+         |  1.64e+11  1.83e+11       -20  2.65e+11  3.36e+11  3.04e+12  4.53e+11  7.65e+10  2.90e+12  8.18e+10  277938.1
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |  BookVa~y  Compan~p  TotalE~y  TotalD~y  Board~ze  BoardA~e  BoardB~s  BoardG~y  BoardS~s  Board~ns  BoardI~n
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      9758      9758      9758      9322      9758      9758      9758      9758      9430      9757      9758
+         |  204.2652  1.72e+10  4.70e+09  1.808781  9.742878  .0327936  .9928264  17.77267  56.47645  .7653242  .5323837
+         |  6029.031  6.33e+10  1.63e+10  26.16148   2.53862  .1781051  .0843971  11.00418  19.11655  .6110882  .4989758
+         | -107.7544    421608 -1.83e+10         0         1         0         0         0         0         0         0
+         |  286196.6  2.23e+12  4.43e+11  2131.513        36         1         1        75       100  8.166667         1
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      3112      3112      3112      3053      3112      3111      3111      3110      3045      3107      3111
+         | -311.3674  1.34e+10  7.32e+09  1.167827  11.74743  .2700096  .9125683   24.9646  36.83372  .8819638   .498875
+         |  19233.87  2.35e+10  1.40e+10    1.9044  4.239513  .4440358   .282512  13.42638  20.01945  .6795778  .5000791
+         | -817229.3  296175.1 -7.71e+09         0         2         0         0         0         0         0         0
+         |  75322.79  3.15e+11  1.38e+11  35.97222        31         1         1        80       100  11.13793         1
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     12870     12870     12870     12375     12870     12869     12869     12868     12475     12864     12869
+         |   79.5839  1.63e+10  5.33e+09  1.650653  10.22758  .0901391  .9734245  19.51085  51.68189  .7934958  .5242832
+         |  10818.46  5.63e+10  1.58e+10  22.72726  3.157192  .2863921  .1608454  12.03583  21.10053  .6302676  .4994294
+         | -817229.3  296175.1 -1.83e+10         0         1         0         0         0         0         0         0
+         |  286196.6  2.23e+12  4.43e+11  2131.513        36         1         1        80       100  11.13793         1
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |  Board~ts  BoardM~n  BoardM~D  Female~d  Number~s  Averag~e  NonExe~s  Indepe~s  CEOBoa~r  CEOCha~n  CEOCom~R
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      9285      9703      9593      9758      9423      9709      9758      9758      9758      9758      9758
+         |  974.4831  1.831083   2253331  17.77267  8.074074  9.054363  81.92437  79.48904   .982066    .60248  .5698914
+         |  153.4993  .9877703  1.99e+07  11.00418   3.79836  4.125623   9.17113  12.53154  .1327184  .4894102  .4951165
+         |         1         1      5000         0         0         0         0         0         0         0         0
+         |       999         5  1.93e+09        75        43  33.10714       100       100         1         1         1
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      2493      2949      2707      3110      2720      2977      3110      3102      3112      3111      3112
+         |  871.7445  3.084774   2092852   24.9646  9.713971  6.697297  85.32813  54.37689  .5986504  .3320476  .2827763
+         |  331.0886  1.422442  2.10e+07  13.42638  5.783436  3.036453  13.70107   25.4848  .4902503  .4710237   .450421
+         |         1         1         0         0         0         0  22.22222         0         0         0         0
+         |       999         6  8.31e+08        80        91   38.9375       100       100         1         1         1
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     11778     12652     12300     12868     12143     12686     12868     12860     12870     12869     12870
+         |  952.7369  2.123301   2218013  19.51085  8.441407  8.501234  82.74701  73.43167  .8893551  .5371047  .5004662
+         |  208.6412   1.22504  2.01e+07  12.03583  4.376436  4.023332  10.54805  19.77906  .3137041  .4986407  .5000192
+         |         1         1         0         0         0         0         0         0         0         0         0
+         |       999         6  1.93e+09        80        91   38.9375       100       100         1         1         1
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |  Chairm~O    TobinQ        MB       CRE  Total~ss      CRER  FirmSize  FirmLe~e       ROA     Indus    FirmID
+---------+--------------------------------------------------------------------------------------------------------------
+       0 |      9758      9758      9758      9758      9758      9758      9758      9758      9758      9758      9758
+         |  .5494978   2.39273  -3.40175  1.41e+09  1.18e+10  .1506926  22.02354  .3830561  .0171165  6.200451  3217.924
+         |  .4975694  2.113571  689.0272  5.84e+09  3.76e+10  .1648144   1.68996  48.03359  .1667427  2.359334  1789.079
+         |         0  .3447168 -67830.78    131910   4544000  .0090005  15.63995 -3125.345 -3.558769         2         5
+         |         1  36.12864  1590.526  1.34e+11  6.54e+11  .9282534  28.30149  2131.513  2.073339        10      6240
+---------+--------------------------------------------------------------------------------------------------------------
+       1 |      3112      3112      3112      3112      3112      3112      3112      3112      3112      3112      3112
+         |   .285347  1.718998  2.528953  2.19e+09  2.22e+10   .106978   22.9152  .9404835  .0337531  5.950193  2986.296
+         |  .4516521  1.447346  21.69419  4.89e+09  4.34e+10  .0915306  1.765541  5.306196  .0794895  2.425574  1818.901
+         |         0  .2941868 -1106.064   2126282  3.25e+07  .0090047  17.27875 -263.4583 -.9182099         2         3
+         |         1  41.96585  236.0399  6.30e+10  5.16e+11  .6666535  28.74261  35.97222  .7202591        10      6232
+---------+--------------------------------------------------------------------------------------------------------------
+   Total |     12870     12870     12870     12870     12870     12870     12870     12870     12870     12870     12870
+         |  .4856255   2.22982  -1.96769  1.60e+09  1.43e+10  .1401223  22.23915  .5178435  .0211393  6.139938  3161.916
+         |  .4998127   1.99413    600.06  5.63e+09  3.93e+10  .1515608  1.750615  41.90648  .1505256  2.377841  1799.001
+         |         0  .2941868 -67830.78    131910   4544000  .0090005  15.63995 -3125.345 -3.558769         2         3
+         |         1  41.96585  1590.526  1.34e+11  6.54e+11  .9282534  28.74261  2131.513  2.073339        10      6240
+------------------------------------------------------------------------------------------------------------------------
+
+  Region |   NumFirm    Region
+---------+--------------------
+       0 |      9758      9758
+         |  4.644087         0
+         |  2.708043         0
+         |         1         0
+         |        10         0
+---------+--------------------
+       1 |      3112      3112
+         |  4.609897         1
+         |  2.717753         0
+         |         1         1
+         |        10         1
+---------+--------------------
+   Total |     12870     12870
+         |   4.63582  .2418026
+         |  2.710328   .428192
+         |         1         0
+         |        10         1
+------------------------------
+  2.67
+  6696889723.71
+  2599017794.07
+  2200002312.69
+  320589531.52
+  4964912464.82
+  2865415412.21
+  388736990.32
+  1893598107.44
+  17591483009.06
+  4044805580.29
+  2228365163.13
+  12031672017.70
+  912126040.54
+  903757498.87
+  3309295534.25
+  6276129690.43
+  9600806585.24
+  8877769641.71
+  7620180053.76
+  1302582709.71
+  2557374781.97
+  7234997768.69
+  8176653864.26
+  2652935491.63
+  4310548049.43
+  4355013816.66
+  72167292793.40
+  17512042443.58
+  3165275964.31
+  60400361355.23
+  2931025277.98
+  5996.87
+  6029.03
+  63274325294.22
+  16349902924.37
+  26.16
+  2.54
+  0.18
+  0.08
+  11.00
+  19.12
+  0.61
+  0.50
+  153.50
+  0.99
+  19862807.67
+  11.00
+  3.80
+  4.13
+  9.17
+  12.53
+  0.13
+  0.49
+  0.50
+  0.50
+  2.11
+  689.03
+  5837708372.24
+  37608605270.75
+  0.16
+  1.69
+  48.03
+  0.17
+  2.36
+  1789.08
+  2.71
+  0.00
+            asdoctable():  3001  expected 22 arguments but received 21
+                 <istmt>:     -  function returned error
+r(3001);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. bysort Region: asdoc tabstat TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\20210
+> 6_Table_Results\202106_6_1DescriptiveStat.doc) replace stat(N mean sd min max tstat)
+
+Summary statistics: N, mean, sd, min, max
+  by categories of: Region 
+
+  Region |    TobinQ      CRER  FirmSize  FirmLe~e
+---------+----------------------------------------
+       0 |      9758      9758      9758      9758
+         |   2.39273  .1506926  22.02354  .3830561
+         |  2.113571  .1648144   1.68996  48.03359
+         |  .3447168  .0090005  15.63995 -3125.345
+         |  36.12864  .9282534  28.30149  2131.513
+---------+----------------------------------------
+       1 |      3112      3112      3112      3112
+         |  1.718998   .106978   22.9152  .9404835
+         |  1.447346  .0915306  1.765541  5.306196
+         |  .2941868  .0090047  17.27875 -263.4583
+         |  41.96585  .6666535  28.74261  35.97222
+---------+----------------------------------------
+   Total |     12870     12870     12870     12870
+         |   2.22982  .1401223  22.23915  .5178435
+         |   1.99413  .1515608  1.750615  41.90648
+         |  .2941868  .0090005  15.63995 -3125.345
+         |  41.96585  .9282534  28.74261  2131.513
+--------------------------------------------------
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_1DescriptiveStat.doc not found)
+  2.11
+  0.16
+  1.69
+  48.03
+            asdoctable():  3001  expected 22 arguments but received 21
+                 <istmt>:     -  function returned error
+r(3001);
+
+end of do-file
+
+r(3001);
+
+. help tstat
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:12:53
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202
+> 106_6_DescriptiveStat.doc) replace stat(N mean sd min max tstat)
+
+             |         N       mean         sd        min        max    t-value 
+-------------+------------------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585   126.8544 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534   104.8841 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261   1441.176 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513   1.401866 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. *asdoc tabstat TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Result
+> s\202106_6_1DescriptiveStat.doc) replace 
+. *asdoc tabstat price mpg rep78 headroom, replace stat(N mean min max tstat)
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:17:40
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region = 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tabl
+> e_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. *asdoc tabstat TobinQ CRER FirmSize FirmLeverage , dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Result
+> s\202106_6_1DescriptiveStat.doc) replace 
+. *asdoc tabstat price mpg rep78 headroom, replace stat(N mean min max tstat)
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:18:35
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc could not be opened
+                 fopen():   603  file could not be opened
+            asdoctable():     -  function returned error
+                 <istmt>:     -  function returned error
+r(603);
+
+end of do-file
+
+r(603);
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:18:51
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region = 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tabl
+> e_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region = 1, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tabl
+> e_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:19:18
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region = 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tabl
+> e_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region = 1, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tabl
+> e_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:19:44
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tab
+> le_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tab
+> le_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:20:57
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Master nest Thesis\202106_DataAnalysis\20210
+> 6_Table_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+(note: file D:\Master nest Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+file D:\Master nest Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc could not be opened
+                 fopen():   603  file could not be opened
+            asdoctable():     -  function returned error
+                 <istmt>:     -  function returned error
+r(603);
+
+end of do-file
+
+r(603);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:21:19
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Master nest Thesis\202106_DataAnalysis\20210
+> 6_Table_Results\202106_6_DescriptiveStat.doc) stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+(note: file D:\Master nest Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+file D:\Master nest Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc could not be opened
+                 fopen():   603  file could not be opened
+            asdoctable():     -  function returned error
+                 <istmt>:     -  function returned error
+r(603);
+
+end of do-file
+
+r(603);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD3890_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:21:49
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tab
+> le_Results\202106_6_DescriptiveStat.doc) nest stat(N mean sd min max)
+(File D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc already exists, option appen
+> d was assumed)
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      TobinQ |      9,758     2.39273    2.113571   .3447168   36.12864
+        CRER |      9,758    .1506926    .1648144   .0090005   .9282534
+    FirmSize |      9,758    22.02354     1.68996   15.63995   28.30149
+FirmLeverage |      9,758    .3830561    48.03359  -3125.345   2131.513
+last estimation results not found, nothing to store
+r(301);
+
+end of do-file
+
+r(301);
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 19:22:11
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\2021
+> 06_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tab
+> le_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Master Thesis\202106_DataAnalysis\202106_Tab
+> le_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 20:04:55
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_0_Master.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 01 June 2021
+>   Description  : This is a master-do files of Grace's master thesis.
+>                                  Included all process about the data.
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:22:42
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:43:39
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   9 Jun 2021, 23:36:17
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   1 Jul 2021, 14:29:59
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   1 Jul 2021, 22:28:52
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   2 Jul 2021, 15:38:09
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   2 Jul 2021, 16:14:33
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:12:52
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_DescriptiveStat.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:28:46
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_DescriptiveStatcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>   Descriptive Statistic
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+. 
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage, dec(2) save(D:\Master Thesis\20210
+> 6_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) replace stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |     12870    2.22982    1.99413   .2941868   41.96585 
+        CRER |     12870   .1401223   .1515608   .0090005   .9282534 
+CEOBoardMe~r |     12870   .8893551   .3137041          0          1 
+CEOCompens~R |     12870   .5004662   .5000192          0          1 
+    FirmSize |     12870   22.23915   1.750615   15.63995   28.74261 
+FirmLeverage |     12870   .5178435   41.90648  -3125.345   2131.513 
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc not found)
+  1.99
+  0.15
+  0.31
+  0.50
+  1.75
+  41.91
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 0, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      9758    2.39273   2.113571   .3447168   36.12864 
+        CRER |      9758   .1506926   .1648144   .0090005   .9282534 
+CEOBoardMe~r |      9758    .982066   .1327184          0          1 
+CEOCompens~R |      9758   .5698914   .4951165          0          1 
+    FirmSize |      9758   22.02354    1.68996   15.63995   28.30149 
+FirmLeverage |      9758   .3830561   48.03359  -3125.345   2131.513 
+  2.11
+  0.16
+  0.13
+  0.50
+  1.69
+  48.03
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. asdoc sum TobinQ CRER CEOBoardMember CEOCompensationLinktoTSR FirmSize FirmLeverage if Region == 1, dec(2) save(D:\Mast
+> er Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc) append stat(N mean sd min max)
+
+             |         N       mean         sd        min        max 
+-------------+-------------------------------------------------------
+      TobinQ |      3112   1.718998   1.447346   .2941868   41.96585 
+        CRER |      3112    .106978   .0915306   .0090047   .6666535 
+CEOBoardMe~r |      3112   .5986504   .4902503          0          1 
+CEOCompens~R |      3112   .2827763    .450421          0          1 
+    FirmSize |      3112    22.9152   1.765541   17.27875   28.74261 
+FirmLeverage |      3112   .9404835   5.306196  -263.4583   35.97222 
+  1.45
+  0.09
+  0.49
+  0.45
+  1.77
+  5.31
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_DescriptiveStat.doc
+
+. 
+end of do-file
+
+.         /**************************************************************************************************************
+> ******\
+>                 7.  Pearson pair-wise Correlation 
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_7_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Correlation table
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close

@@ -1,0 +1,2283 @@
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   4 Jun 2021, 19:50:33
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log not found)
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta not found)
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financial 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Utili
+> ties
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   4 Jun 2021, 20:57:43
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financial 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Utili
+> ties
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+.  do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_2_Append.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : This do file will append(combine) all industrial in to one file
+>                                  By the way, I will separate it into two file: EU_US_Dataset_202106
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   4 Jun 2021, 20:57:49
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financial 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Utili
+> ties
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta"
+
+. tab sector
+variable sector not found
+r(111);
+
+. tab Sector
+
+                         Sector |      Freq.     Percent        Cum.
+--------------------------------+-----------------------------------
+Academic & Educational Services |        470        0.31        0.31
+                Basic Materials |      8,930        5.95        6.26
+             Consumer Cyclicals |     20,890       13.92       20.18
+         Consumer Non-Cyclicals |      9,130        6.08       26.27
+                         Energy |      8,560        5.70       31.97
+                     Financials |     33,270       22.17       54.14
+                     Healthcare |     19,990       13.32       67.46
+                    Industrials |     23,100       15.39       82.85
+                     Technology |     23,210       15.47       98.32
+                      Utilities |      2,520        1.68      100.00
+--------------------------------+-----------------------------------
+                          Total |    150,070      100.00
+
+. exit, clear
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   5 Jun 2021, 16:22:38
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US_Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202106_EUS_Energy 202106_EUS_Financials 2
+> 02106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Utilities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD2278_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   5 Jun 2021, 21:04:30
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   6 Jun 2021, 01:51:56
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:17:39
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   6 Jun 2021, 02:37:17
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:54:51
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 11:58:47
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:01:38
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 12:06:01
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:15:43
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:20:44
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:25:50
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 14:36:16
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:05:03
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   8 Jun 2021, 19:49:22
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   9 Jun 2021, 00:53:28
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   9 Jun 2021, 01:33:09
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:22:37
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   9 Jun 2021, 21:43:32
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   9 Jun 2021, 23:36:10
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   1 Jul 2021, 14:29:54
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   1 Jul 2021, 22:28:48
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   2 Jul 2021, 15:38:04
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   2 Jul 2021, 16:14:03
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:12:30
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_2_Append.log
+  log type:  text
+ opened on:   2 Jul 2021, 17:28:26
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_2_Appendcmd.log opened)
+
+. **********************************************************************************************************************
+. 
+. /***************\
+>   EU_US_Dataset 
+> \***************/
+.         *Create a new dta file to be a base file that all industries data will be store
+.                 *I will start with Academic industry
+.                 use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_Academic.dta"
+
+.                 sort Identifier FiscalYear
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.         *Define specific directory for using the name of dta file without typing all directory
+.         cd "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File"
+D:\Master Thesis\202106_DataAnalysis\202106_DTA_File
+
+.                 *Now EU_US_Dataset.dta is in memory then I will use append command to add another industries into EU_US
+> _Dataset.dta
+.                 append using 202106_EUS_BasicMaterials 202106_EUS_ConsumerCyclicals 202106_EUS_ConsumerNonCyclicals 202
+> 106_EUS_Energy 202106_EUS_Financials 202106_EUS_Healthcare 202106_EUS_Industrials 202106_EUS_Technology 202106_EUS_Util
+> ities
+(note: variable Identifier was str10, now str15 to accommodate using data's values)
+(note: variable Name was str51, now str91 to accommodate using data's values)
+(note: variable LeasesGross was long, now double to accommodate using data's values)
+(note: variable BoardStructureType was str7, now str8 to accommodate using data's values)
+(note: variable Name was str91, now str93 to accommodate using data's values)
+(note: variable Name was str93, now str109 to accommodate using data's values)
+
+.                 save "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta", replace
+file D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS.dta saved
+
+.                 clear
+
+. 
+end of do-file
+
+. 
+.         /**************************************************************************************************************
+> ******\
+>                 3.  Manage variables
+>                         4.1 Label and rename exist variables
+>                         4.2 Generate and drop variables
+>                                 - Dependent Variables
+>                                 - Independent Variables
+>                                 - Control Variables
+>                                 - Others Variables
+>                         4.3 Label new variables
+>                         4.4 Announce to stata that data is a panel
+>         \**************************************************************************************************************
+> ******/
+.                         do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"    
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close

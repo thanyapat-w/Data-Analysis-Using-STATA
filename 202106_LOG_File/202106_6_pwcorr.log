@@ -1,0 +1,385 @@
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:09:06
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(note: file D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log not found)
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER1 CRER2 CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thes
+> is\202106_DataAnalysis\202106_Table_Results\202106_4_SumObs.doc\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.
+> 01, ***@.001) nonum
+
+             |   TobinQ    CRER1    CRER2 CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+       CRER1 |   0.0059   1.0000 
+       CRER2 |  -0.1635***  0.3698***  1.0000 
+CEOBoardMe~r |   0.0620*** -0.0655***  0.0553***  1.0000 
+Chairmanis~O |   0.0454***  0.0384***  0.0361***  0.2541***  1.0000 
+    FirmSize |  -0.3102*** -0.0219**  0.1508*** -0.0513***  0.0539***  1.0000 
+FirmLeverage |  -0.0503*** -0.0088  -0.0039  -0.0016   0.0098   0.0075   1.0000 
+         ROA |   0.0211**  0.1147***  0.0486*** -0.0217**  0.0715***  0.2583***  0.0077   1.0000 
+file D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_4_SumObs.doc\202106_6_pwcorr.doc could not be
+    opened
+                 fopen():   603  file could not be opened
+             rtf_maker():     -  function returned error
+                 <istmt>:     -  function returned error
+r(603);
+
+end of do-file
+
+r(603);
+
+. do "C:\Users\GL\AppData\Local\Temp\STD544_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:09:56
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER1 CRER2 CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thes
+> is\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ    CRER1    CRER2 CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+------------------------------------------------------------------------
+      TobinQ |   1.0000 
+       CRER1 |   0.0059   1.0000 
+       CRER2 |  -0.1635***  0.3698***  1.0000 
+CEOBoardMe~r |   0.0620*** -0.0655***  0.0553***  1.0000 
+Chairmanis~O |   0.0454***  0.0384***  0.0361***  0.2541***  1.0000 
+    FirmSize |  -0.3102*** -0.0219**  0.1508*** -0.0513***  0.0539***  1.0000 
+FirmLeverage |  -0.0503*** -0.0088  -0.0039  -0.0016   0.0098   0.0075   1.0000 
+         ROA |   0.0211**  0.1147***  0.0486*** -0.0217**  0.0715***  0.2583***  0.0077   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:18:00
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thesis\2021
+> 06_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_3_ManageVariables.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Manage variables
+>                                         - Label and rename existing variables
+>                                         - Generate varibles and add Label use for regression
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:30:10
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thesis\2021
+> 06_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:33:36
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, setstars(*@.05, **@.01, ***@.001) sa
+> ve(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703   1.0000 
+CEOBoardMe~r |   0.0588   0.0620   1.0000 
+Chairmanis~O |   0.0475   0.0415   0.2520   1.0000 
+    FirmSize |  -0.3207   0.1514  -0.0608   0.0403   1.0000 
+FirmLeverage |  -0.0503  -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225   0.0443  -0.0212   0.0704   0.2390   0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "C:\Users\GL\AppData\Local\Temp\STD544_000000.tmp"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:39:58
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, setstars(*@.05, **@.01, ***@.001) st
+> ar(all) save(D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_pwcorr.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
+-------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\Master Thesis\202106_DataAnalysis\202106_LOG_File\202106_6_pwcorr.log
+  log type:  text
+ opened on:   5 Jun 2021, 18:44:39
+
+. *cmdlog: saves every command used in stata.
+.         cmdlog using "D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log", append
+(cmdlog D:\Master Thesis\202106_DataAnalysis\202106_LOGCMD_File\202106_6_pwcorrcmd.log opened)
+
+. *************************************************************************************************************
+. 
+. /***********************************************************************************************************\
+>  Corporate real estate ownership ratios by industry and country
+> \***********************************************************************************************************/
+.         use "D:\Master Thesis\202106_DataAnalysis\202106_DTA_File\202106_EUS_dataset.dta"
+
+.         
+. *20210514 After running, this table still stuck at setstar
+. asdoc pwcorr TobinQ CRER CEOBoardMember ChairmanisexCEO FirmSize FirmLeverage ROA, star(all) save(D:\Master Thesis\2021
+> 06_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc) label replace setstars(*@.05, **@.01, ***@.001) nonum
+
+             |   TobinQ     CRER CEOBoa~r Chairm~O FirmSize FirmLe~e      ROA
+-------------+---------------------------------------------------------------
+      TobinQ |   1.0000 
+        CRER |  -0.1703***  1.0000 
+CEOBoardMe~r |   0.0588***  0.0620***  1.0000 
+Chairmanis~O |   0.0475***  0.0415***  0.2520***  1.0000 
+    FirmSize |  -0.3207***  0.1514*** -0.0608***  0.0403***  1.0000 
+FirmLeverage |  -0.0503*** -0.0042  -0.0022   0.0094   0.0093   1.0000 
+         ROA |   0.0225**  0.0443*** -0.0212**  0.0704***  0.2390***  0.0076   1.0000 
+Click to Open File:  D:\Master Thesis\202106_DataAnalysis\202106_Table_Results\202106_6_pwcorr.doc
+
+. 
+end of do-file
+
+. do "D:\Master Thesis\202106_DataAnalysis\202106_DO_File\202106_6_DescriptiveStat.do"
+
+. *This do-flies running under stata versions
+. version 15.0
+
+. 
+. /********************************************************************************************************************\
+>   Project Title: Grace's master thesis
+>   Author       : Thanyapat W. [Grace]
+>   Start Date   : 01 June 2021
+>   Last Modified: 03 June 2021
+>   Description  : Corporate real estate ownership ratios by industry and country
+> \********************************************************************************************************************/
+. 
+. clear
+
+. capture log close
