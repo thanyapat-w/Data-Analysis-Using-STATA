@@ -1,0 +1,60 @@
+StataFileTM:00001:01100:GREC:                          :
+00005:00004:00001:
+*! classname: twowaygraph_g
+*! family: twoway
+*! date: 17 Jun 2021
+*! time: 12:10:59
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.legend.xstretch.set, codename(`"free"')
+.legend.Edit , style(rows(2)) style(cols(0)) keepstyles 
+// legend edits
+
+// legend edits
+
+.legend.plotregion1.label[1].style.editstyle size(vsmall) editcopy
+.legend.plotregion1.label[1].text = {}
+.legend.plotregion1.label[1].text.Arrpush `"CRER US Trend calculate using Building(gross)+Land(gross)+Construction(gross)/Total Asset(gross)"'
+// label[1] edits
+
+// label[1] edits
+
+.legend.plotregion1.label[2].style.editstyle size(vsmall) editcopy
+// label[2] size
+
+// label[2] size
+
+.yaxis1.title.DragBy 0 -.323920605440005
+// title reposition
+
+.yaxis1.title.DragBy 0 -.3239206054400011
+// title reposition
+
+.yaxis1.title.DragBy 0 -.323920605440005
+// title reposition
+
+.plotregion1.plot2.style.editstyle line(color(red)) editcopy
+.plotregion1.plot2.style.editstyle line(width(medthick)) editcopy
+.plotregion1.plot2.style.editstyle line(pattern(dash)) editcopy
+// plot2 edits
+
+// plot2 edits
+
+.plotregion1.plot1.style.editstyle line(color(blue)) editcopy
+.plotregion1.plot1.style.editstyle line(width(medthick)) editcopy
+.plotregion1.plot1.style.editstyle line(pattern(longdash_dot)) editcopy
+// plot1 edits
+
+
+.plotregion1.plot1.style.editstyle line(pattern(shortdash)) editcopy
+// plot1 pattern
+
+// plot1 pattern
+
+
+// <end>
