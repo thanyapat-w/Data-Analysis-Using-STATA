@@ -1,0 +1,487 @@
+Standardized Balance Sheet
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Total Assets [ATOT] represents the total assets of a company, which is the sum of:
+Total Current Assets [ATCA] – Industrial and Utility
+Cash & Due From Banks [ACDB] – Banking only
+Other Earning Assets, Total [SOEA] – Banking only
+Net Loans [ANTL] – Banking only
+Property/Plant/Equipment, Total – Net [APPN] – all industries
+Goodwill, Net [AGWI] – all industries
+Intangibles, Net [AINT] – all industries
+Total Utility Plant, Net [SUPN] – Utility only
+Long-Term Investments [SINV] – all industries
+Insurance Receivables [APRE] – Insurance only
+Notes Receivable – Long-Term [ALTR] – Industrial, Insurance, Utility
+Other Long-Term Assets, Total [SOLA] – all industries
+Deferred Policy Acquisition Costs [ADPA] – Insurance only
+Other Assets, Total [SOAT] – all industries
+Cash and Short-Term Investments [COA:SCSI]
+Cash and Short-Term Investments [SCSI] is the sum of:
+Cash [ACSH]
+Cash & Equivalents [ACAE]
+Short-Term Investments [ASTI]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Cash [COA:ACSH]
+Cash [ACSH] represents cash on hand, balances on demand deposits, and near-term savings and time deposits. These should be readily available for use and must be free from any contractual restrictions that limit their use in satisfying debts and other operational cash needs. When cash includes short-term investments and deposits, it is classified as Cash and Equivalents [ACAE] rather than as Cash [ACSH].
+Cash [ACSH] includes:
+Cash in transit
+Cash in banks
+Petty cash
+Cash [ACSH] excludes:
+Due from banks (classified as Cash & Due From Banks [ACDB])
+Time deposits in banks (due within 90 days) (classified as Cash & Equivalents [ACAE])
+Restricted cash (classified depending on the type of restrictions) (classified as Restricted Cash – Current [ARCA] if it is not available for immediate use and due within one year, classified as Restricted Cash – Long-Term [ARCL] if it is not available for immediate use and due beyond one year)
+Cash in trust (“trust” is treated the same way as “restriction”)
+Short-term paper and CD's, when maturity is less than 3 months (classified as Cash & Cash Equivalents [ACAE])
+Money market funds (classified as Cash & Cash Equivalents [ACAE])
+Short-term paper and CD's, when maturity is 3 to 12 months (classified as Short-Term Investments [ASTI])
+Travel advances (classified as Receivables – Other [AORC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Cash and Equivalents [COA:ACAE]
+Cash and Equivalents [ACAE] represents short-term, highly liquid investments that are both readily convertible to known amounts of cash and so close to their maturity that they present insignificant risk of changes in interest rates. Only investments with original maturities of three months or less qualify under these definitions. When cash is delineated separately it is classified as Cash [ACSH], rather than as Cash and Equivalents [ACAE].
+Cash and Equivalents [ACAE] includes:
+Deposits with financial service companies other than commercial banks
+Short-term paper and CD's (maturity less than 3 months)
+Money market funds
+Cash, when combined with highly liquid investments
+Cash and Equivalents [ACAE] excludes:
+Cash, when listed separately on the balance sheet (classified as Cash [ACSH])
+Petty cash (classified as Cash [ACSH])
+Receivables from sales (classified as Accounts Receivable – Trade, Gross [AARG] or as Receivables – Other [AORC])
+Receivables on long-term construction in progress (classified as Accounts Receivable -Trade, Gross [AARG])
+Restricted Cash - [ARCA]
+Travel advances (classified as Receivables – Other [AORC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Short-Term Investments [COA:ASTI]
+Short-Term Investments [ASTI] consists of any investments in debt and equity securities with maturity of one year or less. The “short-term” nature depends on actual maturity of one year from the balance sheet date rather than on the original maturity of a specific investment. When a company reports its assets without segregation between current and non-current, all investments are classified as Long-Term Investments - Other [ALTI].
+Short-Term Investments [ASTI] includes:
+Short-term loans
+Certificates of deposits (with maturity of 3 to 12 months)
+Short-term paper (with maturity of 3 to 12 months)
+Financial Derivatives in Financial Companies
+Trading account securities in investment services and miscellaneous financial services
+Short-Term Investments [ASTI] excludes:
+Cash and cash deposits in banks (classified as Cash [ACSH])
+Investment in securities of related companies such as affiliates, unconsolidated subsidiaries, joint ventures, or limited partnerships (classified as Other Current Assets [AOCA])
+Investment assets other than trading account assets in investment services and miscellaneous financial service companies when assets are not delineated between current and non-current (classified as Long-Term Investments – Other [ALTI])
+Land for resale in construction and real estate companies (classified as Inventories – Finished Goods [AIFG])
+Restricted cash/investments as a part of current assets (classified as Restricted Cash – Current [ARCA])
+Receivables from sale-type leases (classified as Accounts Receivable – Trade, Gross [AARG])
+Money market funds (classified as Cash & Cash Equivalents [ACAE])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Accounts Receivable – Trade, Net [COA:AACR]
+Accounts Receivable – Trade, Net [AACR] represents claims held against customers for goods sold or services rendered as part of normal business operations.
+Value in Accounts Receivable – Trade, Net [AACR] is normally Accounts Receivable – Trade, Gross [AARG] reduced by Provision for Doubtful Accounts [APDA]. However, when the receivables are reported net of provision for doubtful accounts, Accounts Receivable – Trade, Net [AACR] is used, instead of Gross [AARG] and Provision [APDA].
+When a company's balance sheet does not delineate between current and non-current notes receivables, all are classified as Notes Receivable – Long Term [ALTR].
+Accounts Receivable – Trade, Net [AACR] includes:
+Rent receivable in real estate operations companies
+Advisory fees receivable in investment service companies
+Accounts receivable from unconsolidated subsidiaries, joint ventures, and limited partners
+Interest receivables in non-banking financial service companies
+Royalty/franchise fees receivable in franchising businesses
+Accrued main business revenue (as long as a company is entitled to bill it by the passage of time or upon usage)
+Receivable from related/due from related parties
+Receivable from affiliate/due from affiliates
+Receivable from associate/due from associates
+Unbilled Receivables (for Industrial companies, if reported under Receivables or as a separate line item)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Accounts Receivable – Trade, Gross [COA:AARG]
+Accounts Receivable – Trade, Gross [AARG] represents receivables from sales of trading assets (such as inventories) or from services provided. Trade accounts receivable are restricted to “current” assets, where “current” is defined as one year or one operating cycle of the company, whichever is longer. This information is classified as Accounts Receivable – Trade, Gross [AARG] only when it is presented as such on the company's balance sheet or in its notes.
+When sales receipts are exchanged with a promissory note, such notes are treated as Notes Receivable – Short-Term [ASTR]. However, when such delineation between accounts receivable and notes receivable is not clear, notes receivable are classified as Accounts Receivable [AARG].
+Receivables from the sale of merchandise or services provided to affiliates or other related companies are treated as “trade” receivables and included in Accounts Receivable – Trade, Gross [AARG].
+Some companies report their trade accounts receivable, net of provision for doubtful accounts, and also provide the doubtful account value on the balance sheet. When this occurs, Thomson Reuters calculates an Account Receivable – Trade, Gross [AARG] value and enter the value for Provision for Doubtful Accounts [APDA] on the balance sheet. When a company does not delineate between notes receivable and accounts receivable, and the information is provided in one line as notes and accounts receivable, Thomson Reuters classifies the figure as Accounts Receivable – Trade, Net [AACR].
+Accounts Receivable – Trade, Gross [AARG] includes:
+Factored receivables (with recourse)
+Finance/interest receivables in non-banking financial service companies
+Franchise/license fees receivable in technology companies
+Royalties receivable
+Current portion of long-term receivable (trade)
+Unbilled Receivables (for Industrial companies, if reported under Receivables or as a separate line item)
+Accounts Receivable – Trade, Gross [AARG] excludes:
+Trade accounts receivable, net of provision for doubtful accounts (classified as Accounts Receivable – Trade, Net [AACR])
+Unbilled utility revenue (classified as Unbilled Utility Revenues [AUUR] for Utility companies)
+Finance/interest receivable in industries other than non-banking financial services (classified as Receivables – Other [AORC])
+Taxes recoverable (classified as Receivables – Other [AORC])
+Receivables from individuals other than customers, such as employees, directors, officers (classified as Receivables – Other [AORC])
+Loans (receivable) to customers in non-banking financial service companies (loans as well as provisions for loan losses are classified as Notes Receivable – Short-Term [ASTR])
+(Short-term) Loans to employees, officers, directors, affiliates in industries other than non-banking financial service companies (classified as Receivables – Other [AORC])
+(Short-term) Loans to third parties (classified as Short Term Investments [ASTI])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Provision for Doubtful Accounts [COA:APDA]
+Provision for Doubtful Accounts [APDA] represents provisions established for doubtful accounts receivable. Provision for doubtful accounts is usually established on the basis of maturities of receivables and the company's experience on collecting such receivables.
+Since this is an asset account, Provision for Doubtful Accounts [APDA] is established as a contra account to receivables and expressed in a negative figure.
+Provision for Doubtful Accounts [APDA] includes:
+Provision for the current portion of long-term receivables (other than trade receivables)
+Provision for Doubtful Accounts [APDA] excludes:
+Provision for notes receivable (classified as Notes Receivable – Short-Term [ASTR])
+Provision for receivables other than trade receivables (classified as Receivables – Other [AORC])
+Provision for unbilled utility revenues (classified as Unbilled Utility Revenue [AUUR])
+Provision for receivables other than those included in Accounts Receivable – Trade, Gross [AARG])
+Provision for loans in non-banking financial service companies (classified as Notes Receivable – Short-Term [ASTR])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Total Receivables, Net [COA:ATRC]
+Total Receivables, Net [ATRC] normally represents the sum of:
+Accounts Receivable – Trade, Net [AACR]
+Notes Receivable – Short-Term [ASTR]
+Receivables – Other [AORC]
+However, if a company reports its receivables without any of the above details, the reported receivables are classified as Total Receivables, Net [ATRC].
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Notes Receivable – Short-Term [COA:ASTR]
+Notes Receivable – Short-Term [ASTR] represents promissory notes received in exchange for goods sold or services rendered by a company to customers in the normal course of business.
+Receivables from customers qualify as “current” as long as their maturities are within one year or one operating cycle, whichever is longer. This implies that there are no non-current trade notes receivable. When a non-differentiated balance sheet is utilized, receivables are classified as Notes Receivable – Long Term [ALTR].
+Notes Receivable – Short-Term [ASTR] includes:
+Loans to customers (gross or net of provision for loan losses) in non-banking financial service companies
+Provision for loan losses on loans to customers in non-banking financial service companies (reported as a negative figure)
+Finance leases in real estate operations companies
+Current portion of long-term notes receivable
+Commercial paper discounted as investments in non-banking financial service companies
+Notes Receivable – Short-Term [ASTR] excludes:
+Notes receivables from shareholders, employees, officers, or directors (classified as Receivables – Other [AORC])
+Any notes receivable that are not originated from products sold or services rendered (classified as Receivables – Other [AORC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Receivables – Other [COA:AORC]
+Receivables – Other [AORC] represents a company's receivables that are from activities other than trading (sale of products or services rendered). Non-trading receivables may include both current and non-current receivables; the current portion is classified Receivables – other [AORC].
+Receivables – Other [AORC] includes:
+Receivables from/due from employees, officers, directors, or shareholders
+Loans to employees, officers, directors, or shareholders
+Taxes receivable
+(Accrued) Interest/dividends receivable in companies other than non-banking financial service companies
+Receivables – Other [AORC] excludes:
+Loans receivable in non-banking financial service companies (classified as Notes Receivable – Short-Term [ASTR])
+Short-term loans (to a third party) (classified as Short-Term Investments [ASTI])
+Excess billing (classified as a negative figure as part of Inventories – Work-in-Progress [AIWP])
+(Trade) Receivables from affiliates, unconsolidated subsidiaries, or joint ventures (classified as Accounts Receivable – Trade, Gross [AARG] or as Accounts Receivable – Trade, Net [AACR])
+Unbilled revenue receivables in utility companies (classified as Unbilled Utility Revenue [AUUR])
+Unbilled receivables reported outside Trade Receivables and in industries other than utility (classified as Inventories – Finished Goods [AIFG])
+Service contracts receivable (classified either as Accounts Receivable – Trade, Gross [AARG] or as Accounts Receivable – Trade, Net [AACR])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Total Inventory [COA:AITL]
+Total Inventory [AITL] consists of all assets held for sale in the ordinary course of business or goods that are used and/or consumed in the production of goods to be sold. Inventories may include raw material, work in progress and finished goods, although other categories of asset items may be classified as 'Inventories' depending upon the company's business.
+Thomson Reuters defines Total Inventory [AITL] as the sum of:
+Inventories – Finished Goods [AIFG]
+Inventories – Work-in-Progress [AIWP]
+Inventories – Raw Materials [AIRM]
+Inventories – Other [AIOT]
+LIFO Reserve [AILR]
+Gas in Storage – Inventory [AGIS]
+Fuel – Inventory [AFUL]
+When there is no specific delineation of inventories among finished goods, work-in-progress, and raw materials, Thomson Reuters classifies the inventory as Total Inventory [AITL].
+
+Credit card receivables (commonly in retail companies) (classified either as Accounts Receivable – Trade, Gross [AARG] or as Accounts Receivable – Trade, Net [AACR])
+Receivables from agents, policyholders, or reinsurers in insurance companies (classified as Insurance Receivables [APRE])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Prepaid Expenses [COA:APPY]
+Prepaid Expenses [APPY] represents goods or services that have already been purchased, but not fully consumed or used. Because Prepaid Expenses [APPY] is defined as a part of current assets, such benefits are expected within one year or an operating cycle of the company, whichever is longer, from the current fiscal period end date.
+Prepaid assets may include prepaid fees, commissions, taxes, insurance expenses, prepayments to reinsurers, rents, or other expenses. Additionally, other categories of assets may be classified as a „Prepaid Asset‟ depending on the company's business.
+Prepaid Expenses [APPY] includes:
+Accrued revenue, if the company does not delineate it from prepaid expenses
+Prepaid taxes
+Prepaid Expenses [APPY] excludes:
+Prepayments for inventories (classified as Inventories – Other [AIOT])
+Deferred income tax assets (classified as Deferred Income Tax – Current Asset [ADTC])
+Accrued revenue (not from main business), if separated from prepaid expenses (classified as Receivables - Other [AORC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Other Current Assets [COA:AOCA]
+Other Current Assets [AOCA] , a component of Other Current Assets, Total [SOCA], represents assets other than:
+Restricted Cash/Investments – Current [ARCA]
+Deferred Income Tax – Current Assets [ADTC]
+Unbilled Utility Revenue [AUUR] – Utility only
+Deferred Gas Cost [ADGC] – Utility only
+Discontinued Operations – Current Assets [ADCA]
+Other Current Assets [AOCA] includes:
+Assets held for sale/disposal/disposition
+Deferred costs, such as capitalized costs for software development, debt issuance, and offering costs when reported as a part of current assets
+Security deposits (current portion)
+Financial Derivatives for Non-Financial Companies
+Other Current Assets [AOCA] excludes:
+Advance payments to employees, officers, directors, stockholders, and affiliates (classified as Receivables – Other [AORC])
+Accrued revenue (classified as Receivables – Other [AORC])
+Advance payments to operating parties such as suppliers and vendors (classified as Prepaid Expenses [APPY])
+Advance payments for taxes, commissions (classified as Prepaid Expenses [APPY])
+Certificates of deposits, with maturities greater than 3 months (classified as Short-Term Investments [ASTI])
+Claims recoverable from reinsurers in insurance companies (classified as Insurance Receivables [APRE])
+Receivables from clearing brokers in investment service companies (classified as Accounts Receivable – Trade, Gross [AARG] or Accounts Receivable – Trade, Net [AACR])
+Commercial loans, commercial papers (receivable) (classified as Short-Term Investments [ASTI])
+Derivatives on commodity contracts, hedged contracts (classified as Short-Term Investments [ASTI])
+Construction contracts, construction costs accumulated, cost in excess of billing in construction service companies (classified as Inventories – Work-in-Progress [AIWP])
+Construction in progress for own property/plant when reported as a part of fixed assets (classified as Construction-in-Progress – Gross [ACPC])
+Contracts receivable (classified as Accounts Receivable – Trade, Gross [AARG] or Accounts Receivable – Trade, Net [AACR])
+Contracts in progress (classified as Inventories – Work-in-Progress [AIWP])
+Receivables/due from affiliates (classified as Accounts Receivable – Trade, Gross [AARG] or Accounts Receivable – Trade, Net [AACR])
+Advances/ Receivables/due from employees, officers, directors, stockholders, affiliates (classified as Receivables – Other [AORC])
+Income taxes receivable/recoverable/refundable, interest receivable (classified as Receivables – Other [AORC])
+Excess billing over cost (classified as Inventories – Work-in-Progress [AIWP])
+Goodwill when reported as a part of non-current assets (classified as Goodwill, Gross [AGWG] or Goodwill, Net [AGWI])
+Loans to third parties (classified as Short-Term Investments [ASTI])
+Unbilled revenue in companies other than utility companies (classified as Inventories – Finished Goods [AIFG])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Property/Plant/Equipment, Total - Gross [COA:APTC]
+Property/Plant/Equipment, Total – Gross [APTC] , when fixed assets are reported before depreciation but without detailed delineation, represents the sum of:
+Buildings – Gross [APBC]
+Land/Improvements – Gross [ALIC]
+Machinery/Equipment – Gross [AMEC]
+Construction in Progress – Gross [ACPC]
+Leases – Gross [APLC]
+Natural Resources – Gross [ANRC]
+Other Property/Plant/Equipment – Gross [AOPC]
+Items included in Property/Plant/Equipment, Total – Gross [APTC] are assumed to be used for operations. Non-operational fixed assets are classified as Other Long Term Assets [AOAS] or Other Assets [AOAT], depending on company's reporting practices.
+Property/Plant/Equipment Total – Gross [APTC] excludes:
+Assets of discontinued operations (classified as Discontinued Operations – Long-Term Assets [ADTA] when reported other than as part of tangible fixed assets)
+Assets acquired for sale instead of own use (classified as Inventories – Other [AIOT])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Building – Gross [COA:APBC]
+Building – Gross [APBC] represents the gross amount of buildings and their attachments, before being reduced by accumulated depreciation of the buildings.
+Building – Gross [APBC] includes:
+Properties (residential, commercial, office) for rent in a real estate rental company
+Leased property under finance lease, including leasehold improvements on it, for own use
+Building – Gross [APBC] excludes:
+Power plant/distribution establishment in utility companies (classified as Power Plant [AUTP])
+Property for sale in construction or real estate companies (classified as Inventories – Finished Goods [AIFG] when reported other than as a part of tangible fixed assets, or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Real estate held for investments in real estate companies (classified as LT Investments – Other [ALTI] when reported other than as a part of tangible fixed assets, or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Property (after being used by the company) for sale, reported other than as a part of tangible fixed assets (classified as Other Long Term Assets [AOAS] (may be classified as Other Assets [AOAT] when assets of the company are not delineated between current and non-current) or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Proved and unproved properties in oil and other mining companies (classified as Natural Resources – Gross [ANRC])
+Properties under lease, including tenant improvement (rental property), especially in real estate operations (classified as Leases – Gross [APLC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Land/Improvements – Gross [COA:ALIC]
+Land/Improvements – Gross [ALIC] represents land and improvements on land at acquisition cost. Land is not depreciated, but land improvements are normally depreciated over time.
+Land/Improvements – Gross [ALIC] includes:
+Improvements in land (subject to depreciation)
+Land/Improvements – Gross [ALIC] excludes:
+Land with natural resources in coal and oil companies (classified as Natural Resources – Gross [ANRC] or Land/Improvement – Gross [ALIC], depending on company reporting)
+Proved or unproved properties in oil and other mining companies (classified as Natural Resources – Gross [ANRC])
+Power plant/distribution establishment in utility companies (classified as Power Plant [AUTP])
+Property/land held for sale in construction, real estate, and construction companies (classified as Inventories – Finished Goods [AIFG] when reported other than as a part of tangible fixed assets, or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Property held for future development and sale in real estate companies (classified as Inventories – Other [AIOT] or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Property held for future development and rent in real estate and construction companies (classified as Inventories – Work in Progress [AIWP] when reported as a part of tangible fixed assets)
+Property held for future development in companies other than real estate or construction companies (classified as Construction in Progress – Gross [ACPC])
+Real estate held for investments in real estate companies (classified as LT Investments – Other [ALTI] or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Property (after being used by the company) for sale when reported other than as a part of tangible fixed assets (classified as Other Long Term Assets [AOAS] (may be classified as Other Assets [AOAT] when assets of the company are not delineated between current and non-current), or Other Property/Plant/Equipment [AOPC] when reported as a part of tangible fixed assets)
+Properties under lease (rental property) (classified as Leases – Gross [APLC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Machinery/Equipment – Gross [COA:AMEC]
+Machinery/Equipment – Gross [AMEC] represents the acquisition cost of machinery and other equipment (including delivery equipment, office equipment, machinery, furniture and fixtures, furnishings, factory equipment, tools, etc.) in a company, before being reduced by accumulated depreciation.
+Machinery/Equipment – Gross [AMEC] includes:
+Software (acquired/capitalized) as an integral part of computers and equipment to be operated
+Machinery/equipment capitalized under finance lease
+Gas pipeline facilities for long-distance transmission owned by gas utility companies (non-utility facility)
+Automobiles for own use in auto/truck manufacturers
+Government grants for acquisition of certain machinery/equipment
+Machinery/Equipment – Gross [AMEC] excludes:
+Machinery/Equipment not in service (classified as Other Property/Plant/Equipment [AOPC])
+Properties under lease (rental property) (classified as Leases – Gross [APLC])
+Acquired software or other intangible assets when not associated with specific machinery or equipment and reported other than as part of tangible fixed assets (classified as Intangibles – Gross [AING])
+Capitalized development costs including software when reported other than as part of tangible fixed assets (classified as Intangibles, Gross [AING])
+Aircraft in aerospace companies when reported other than as a part of tangible fixed assets and assets that are not delineated between current and non-current (classified as Inventories – Finished Goods [AIFG])
+Aircraft engines in aerospace companies, when reported other than as a part of tangible fixed assets and assets that are not delineated between current and non-current (classified as Inventories – Work-in-Progress [AWIP])
+Prepayment/deposits for aircraft acquisition in airline transportation companies (classified as Construction in Progress – Gross [ACPC])
+Automobiles for sale by auto/truck manufacturers when reported other than as a part of tangible fixed assets and assets are not delineated between current and non-current (classified as Inventories – Finished Goods [AIFG])
+Power generation/power distribution equipment in electric utility companies (classified as Utility Plant [AUTP])
+Gas gathering, gas storage, or gas transmission equipment (classified as Utility Plant [AUTP])
+Properties under lease (rental property) (classified as Leases – Gross [APLC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Construction in Progress – Gross [COA:ACPC]
+Construction in Progress – Gross [ACPC] represents the cost of construction in progress of fixed assets for a company's own use. The cost of construction in progress is normally not depreciated until the fixed assets are completed and placed in production.
+Fixed assets constructed by the company may include costs of materials and other resources consumed for construction.
+However, Construction in Progress – Gross [ACPC] does not include the cost associated with projects for customers, which may be included as an inventory.
+Construction in Progress – Gross [ACPC] includes:
+Work-in-progress of products to be sold when reported other than as a part of tangible fixed assets (classified as Inventories – Work-in-Progress [AIWP] when assets are not delineated between current and non-current)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Leases – Gross [COA:APLC]
+Leases – Gross [APLC] represents properties leased/rented to outside customers. It also includes tenant improvements.
+Leases – Gross [APLC] excludes:
+Property in use under finance lease (eliminated from assets of leasing companies)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Other Properties/Plant/Equipment – Gross [COA:AOPC]
+Other Properties/Plant/Equipment – Gross [AOPC] represents gross property, plant, and equipment, other than those included in the following items:
+Buildings – Gross [APBC]
+Land/Improvements – Gross [ALIC]
+Machinery/Equipment – Gross [AMEC]
+Construction in Progress – Gross [ACPC]
+Leases – Gross [APLC]
+Natural Resources – Gross [ANRC]
+Other Properties/Plant/Equipment – Gross [AOPC] includes:
+Property/plant/equipment not in service
+Capitalized interest expenses that may be assigned to the respective property
+Other” fixed assets not clearly delineated by a reporting company
+Other Properties/Plant/Equipment – Gross [AOPC] excludes:
+Deferred costs when reported other than as a part of tangible fixed assets (classified as Deferred Charges [ADFC])
+Capitalized costs for website development or product development when reported other than as a part of tangible fixed assets (classified as Intangibles, Gross [AING])
+Advance payments (to vendors/suppliers), reported in the non-current asset section, other than for tangible fixed assets (classified as Other Long Term Assets [AOAS], may be classified as Other Assets [AOAT] when assets of the company are not delineated between current and non-current)
+Property not in use when reported other than as a part of tangible fixed assets (classified as Other Long Term Assets [AOAS], may be classified as Other Assets [AOAT] when assets of the company are not delineated between current and non-current)
+Property for sale when reported other than as a part of tangible fixed assets (classified as Investments – Other [ALTI])
+Non-utility property in utility companies (classified as appropriate, may be Other Properties/Plant/Equipment - Gross [AOPC] if not specified)
+Nuclear fuel (classified as Utility Plant [AUTP])
+Power generation/power distribution equipment in electric utility companies (classified as Utility Plant [AUTP])
+Gas gathering, gas storage, gas transmission equipment (classified as Utility Plant [AUTP])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Property/Plant/Equipment, Total – Net [COA:APPN]
+Property/Plant/Equipment, Total – Net [APPN] normally represents Property/Plant/Equipment, Total – Gross [APTC] reduced by Accumulated Depreciation, Total [ADEP]. However, when a company reports its fixed assets net of accumulated depreciation, fixed assets are compiled using Property/Plant/Equipment, Total – Net [APPN].
+Property/Plant/Equipment, Total – Net [APPN] may include land, buildings, machinery, furniture, tools, natural resources, leases, and construction in progress. Additionally, other categories of asset items may be classified as “Property and Equipment”, depending upon the company's business.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Accumulated Depreciation, Total [COA:ADEP]
+Accumulated Depreciation, Total [ADEP] represents an aggregate of accumulated depreciation to each of the fixed assets, if any, included in the following items:
+Buildings – Gross [APBC]
+Land/Improvements – Gross [ALIC]
+Machinery/Equipment – Gross [AMEC]
+Construction in Progress – Gross [ACPC]
+Leases – Gross [APLC]
+Other Property/Plant/Equipment – Gross [AOPC]
+Fixed assets acquired are recorded at their book values and gradually disseminated as expenses upon their usage throughout the useful life of each asset.
+Due to the nature of Accumulated Depreciation, Total [ADEP] as a contra account to assets, it is always a negative figure.
+Accumulated Depreciation, Total [ADEP] includes:
+Amortization of capitalized fixed assets under finance lease
+Depreciation of fixed assets leased as rental property
+Depletion of consumable natural resources
+Asset impairment as extraordinary diminution of value of fixed assets
+Accumulated Depreciation, Total [ADEP] excludes:
+Properties for sale or as investments (classified as LT Investments – Other [ALTI])
+Properties under construction and not employed for production (classified as Construction in Progress – Gross [ACPC])
+Properties used up and retired (classified as Other Long Term Assets [AOAS] when reported other than as a part of tangible fixed assets, or Other Assets [AOAT] when assets of the company are not delineated between current and non-current)
+Fixed assets under discontinued operations (classified as a part of Discontinued Operations – LT Asset [ADOA] when reported other than as a part of tangible fixed assets)
+Depreciation/amortization of nuclear fuel in utility companies (classified as Utility Plant Accumulated Depreciation [AUTP])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Goodwill, Net [COA:AGWI]
+Goodwill, Net [AGWI] represents Goodwill, Gross [AGWG] reduced by Accumulated Goodwill Amortization [AAGA]. When a company reports its goodwill, net of accumulated amortization, the net figure is directly assigned to Goodwill, Net [AGWI] and neither Goodwill, Gross [AGWG] nor Accumulated Goodwill Amortization [AAGA] is used.
+Goodwill, Net [AGWI] includes:
+Negative goodwill (reported as a part of total assets)
+Goodwill, Net [AGWI] excludes:
+Intangible fixed assets (acquired or capitalized) (classified as Intangibles, Gross [AING] when amortization of intangibles is present, and Intangibles, Net [AINT] in the absence of the amortization)
+Acquired licenses, patents (classified as Intangibles, Gross [AING] when amortization of intangibles is present, and Intangibles, Net [AINT] in the absence of the amortization)
+(Capitalized) Computer software, broadcasting licenses, dry-docking rights, covenants (classified as Intangibles, Gross [AING] when amortization of intangibles is present, and Intangibles, Net [AINT] in the absence of the amortization)
+(Deferred) Organization costs (classified as Deferred Charges [ADFC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Goodwill, Gross [COA:AGWG]
+Goodwill, Gross [AGWG] represents the excess of purchase price over the fair market value of net assets acquired. Goodwill may consist of certain rights or privileges, but it is not specifically identifiable and it is assumed to have such value for a significant period after the acquisition.
+Negative goodwill is generally considered as a good deal by the purchasing company and added to shareholders' equity.
+Goodwill, Gross [AGWG] excludes:
+Intangible fixed assets (classified as Intangibles, Gross [AING])
+Deferred costs, such as organization costs or pre-opening costs (classified as Deferred Charges [ADFC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Accumulated Goodwill Amortization [COA:AAGA]
+Accumulated Goodwill Amortization [AAGA] represents accumulated amortization of goodwill acquired through mergers according to the Purchase Method. Due to the nature of Accumulated Goodwill Amortization [AAGA] as a contra account to assets, it is always a negative figure. Upon the institution of SFAS 142 (which took effect in January 2002), goodwill ceased to be amortized, and may only be written off if it is impaired.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Intangibles, Net [COA:AINT]
+Intangibles, Net [AINT] represents Intangibles, Gross [AING] reduced by Accumulated Intangible Amortization [AAMT]. Intangibles, Net [AINT] is utilized when the company does not provide Intangibles, Gross [AING].
+Intangibles consist of patents, copyrights, franchises, goodwill, trademarks, trade names, secret processes, and organization costs.
+Intangibles, Net [AINT] includes:
+Capitalized software/website development costs (not specific to certain machinery)
+Capitalized costs for FCC licenses in telecommunications/broadcasting companies
+Prepayments for licenses
+Franchising costs
+Capitalized research and development costs, if any
+Costs for pictures/films/DVD libraries in movie/entertainment companies
+Broadcasting rights/broadcasting licenses/cable franchises
+Costs for acquisition of prospective customer lists
+Costs of FCC licenses in broadcasting, satellite, and wireless communication service companies
+Mortgage servicing rights acquired in banking and financial services companies
+Water usage/access rights in water utility companies
+Intangibles, Net [AINT] excludes:
+Goodwill or acquisition costs in excess of market value of acquired assets (classified as Goodwill, Net [AGWI])
+Deferred charges, such as bond issuance expenses, bond placement costs, borrowing costs, and other financing costs (classified as Deferred Charges [ADFC])
+Deferred charges such as organization costs/set-up costs/reorganization costs (classified as Deferred Charges [ADFC])
+Software (acquired or capitalized) for specific machinery when reported as part of tangible fixed assets (classified as Machinery/Equipment – Gross [AMEC])
+Rights to extract minerals such as gold, coal, gas, oil, etc when reported other than as a part of tangible fixed assets (classified as Natural Resources – Gross [ANRC])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Intangibles, Gross [COA:AING]
+Intangibles, Gross [AING] consists of patents, copyrights, franchises, goodwill, trademarks, trade names, secret processes, and organization costs. Intangibles, Gross [AING] represents the gross amount of intangibles before being reduced by Accumulated Intangible Amortization [AAMT]. If the company reports a net figure, it is classified as Intangibles, Net [AINT].
+Intangibles, Gross [AING] excludes:
+Intangible assets capitalized (classified as Intangibles, Net [AINT])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Accumulated Intangible Amortization [COA:AAMT]
+Accumulated Intangible Amortization [AAMT] represents accumulated amortization against intangible fixed assets. Intangible fixed assets acquired are expensed over the useful life of each asset, and amortization of each intangible asset is included in Accumulated Intangible Amortization [AAMT].
+Amortization to be included in Accumulated Intangible Amortization [AAMT] should match that included in Intangibles, Gross [AING].
+Due to the nature of Accumulated Intangible Amortization [AAMT] as a contra account to assets, Accumulated Intangible Amortization [AAMT] is always a negative figure.
+Accumulated Intangible Amortization [AAMT] includes:
+Impairment of Intangible Assets, when reported together with Accumulated Intangible Amortization as a contra to Intangibles, Gross [AING].
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Long-Term Investments [COA:SINV]
+Long-Term Investments [SINV] represents the sum of LT Investments – Affiliate Companies [AEQI] and LT Investments – Other [ALTI].
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Notes Receivable – Long-Term [COA:ALTR]
+Notes Receivable – Long Term [ALTR] represents long-term notes receivable, excluding the current portion of the long-term receivables. It also represents all other long term receivables reported in the Non-current Assets section. When a company reports its assets without segregation between current and non-current, all notes receivable are classified as Notes Receivable – Long Term [ALTR].
+Notes Receivable – Long Term [ALTR] includes:
+Long Term Accounts and Notes receivable reported in Non-current Assets section
+Long Term Capital/Finance receivables
+Long Term Guarantee receivables
+Long Term Lease receivables
+Other Long Term receivables
+Notes receivable for companies that do not segregate between current and non-current assets
+Notes Receivable – Long Term [ALTR] excludes:
+Loans receivable in insurance companies (classified as LT Investments – Other [ALTI])
+Insurance receivable and Premium Notes receivable in insurance companies (classified as Insurance Receivables [APRE])
+Notes receivable in investment services, miscellaneous financial services and other non-banking financial service companies (classified as Notes Receivables – Short-Term [ASTR] when reported as a part of current assets)
+Notes receivable in real estate operations which are treated as mortgage loans to customers (classified as Notes Receivables – Short-Term [ASTR])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Other Long-Term Assets, Total [COA:SOLA]
+Other Long-Term Assets, Total [SOLA] represents the sum of:
+Deferred Charges [ADFC]
+Pension Benefits – Overfunded [APBO]
+Deferred Income Tax – Long-Term Asset [ADTA]
+Discontinued Operations – Long-Term Asset [ADOA]
+Restricted Cash – Long-Term [ARCL]
+Other Long-Term Assets [AOAS]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Deferred Charges [COA:ADFC]
+Deferred Charges [ADFC] represents prepaid expenses other than for operations. Such expenses may be deferred and amortized in later years.
+Certain deferred charges, such as debt issuance expenses, may be deferred as an asset and amortized during the life of related debt instruments. However, a similar item, such as debt discounts, may be amortized as an additional interest expense and the remaining balance may be reported as a contra item to related debts outstanding instead of as a deferred charge.
+Deferred Charges [ADFC] includes:
+Deferred financing costs, deferred debt issuance costs, deferred loan expenses
+Deferred Charges [ADFC] excludes:
+Prepayment for inventory purchases (classified as a related inventory item such as Inventories – Finished Goods [AIFG] Inventories – Raw Materials [AIRM], etc.)
+Prepayment for purchase of fixed assets when reported as a part of tangible fixed assets, or as a part of non-current assets but not as a part of tangible fixed assets (classified as Construction in Progress [ACPC])
+Prepayment for pension benefits or any employment-related items such as post-retirement health benefits (classified as Pension Benefits – Overfunded [APBO])
+Taxes recoverable (finite receivable) (classified as Receivables – Other [AORC] when reported as a part of current assets, or Other Long-Term Assets [AOAS] when reported as a part of non-current assets)
+Deferred tax assets (estimated receivable) (classified as Deferred Income Tax – Long-Term Asset [ADTA])
+Deferred acquisition costs (classified as Goodwill, Gross [AGWG] when amortization of goodwill is present, and Goodwill, Net [AGWI] in the absence of the amortization)
+Decommissioning funds in utility companies (classified as LT Investments – Other [ALTI])
+Deferred development costs (classified as Intangibles, Gross [AING] when amortization of intangibles is present and Intangibles, Net [AINT] in the absence of the amortization)
+Deferred royalty payments, deferred commissions paid, deferred consulting fees paid, or other operating expenses (classified as Prepaid Expenses [APPY] when assets of a company are delineated between current and non-current, otherwise Other Long-Term Assets [AOAS])
+Deferred or prepaid interest expenses (classified as Prepaid Expenses [APPY] when assets of a company are delineated between current and non-current, otherwise Other Long-Term Assets [AOAS])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Deferred Income Tax – Long-Term Asset [COA:ADTA]
+Deferred Income Tax – Long-Term Asset [ADTA] represents credits that are being applied to income taxes that will be paid in future years.
+Deferred Income Tax – Long-Term Asset [ADTA] excludes:
+Prepaid taxes, where such obligation to tax authorities is confirmed and differentiated from estimated deferred tax assets (classified as Prepaid Expenses [APPY] when assets of a company are not delineated between current and non-current, otherwise Other Long-Term Assets [AOAS])
+Taxes recoverable (classified as Receivables – Other [AORC] when assets of a company are not delineated between current and non-current, otherwise Other Long-Term Assets [AOAS])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Discontinued Operations – LT Asset [COA:ADOA]
+Discontinued Operations – LT Asset [ADOA] represents long-term assets of discontinued operations. Such assets in discontinued operations may be subject to disposition in the future or deployed for other operations.
+When a company does not delineate between current and non-current assets, all assets under discontinued operations are classified as Discontinued Operations – LT Asset [ADOA].
+Discontinued Operations – LT Asset [ADOA] excludes:
+Property, plant, and equipment for sale, after usage (classified as Other Long Term Assets [AOAS], may be classified as Other Assets [AOAT] when assets of a company are not delineated between current and non-current)
+Property for sale as an investment (classified as LT Investments – Other [ALTI])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Other Long-Term Assets [COA:AOAS]
+Other Long-Term Assets [AOAS] represents “other long-term assets” not included in:
+Deferred Charges [ADFC]
+Pension Benefits – Overfunded [APBO]
+Deferred Income Tax – Long-Term Asset [ADTA]
+Discontinued Operations – LT Asset [ADOA]
+Restricted Cash – Long-Term [ARCL]
+Other Long-Term Assets [AOAS] includes:
+Advances to distributors/officers/employers
+Cash surrendered
+Customer deposits (long-term)
+Prepaid expenses (long-term)
+Security deposits (i.e., for renting)
+Unpaid capital/subscriptions receivable
+Financial Derivatives for Non-Financial Companies
+Other Long-Term Assets [AOAS] excludes:
+Non-trade, long-term accounts and notes receivable (classified as Long-Term Notes Receivable [ALTR])
+Trade receivables from affiliates (classified as Accounts Receivable, Trade – Net [AACR] or , Accounts Receivable, Trade – Gross [AARG] when reported with a provision for doubtful accounts and when assets of a company are not delineated between current and non-current, or Notes Receivable – Long-Term [ALTR] when reported as part of non-current assets)
+Receivables/dues from affiliates that are not considered as trade receivables and short-term (classified as Receivables – Other [AORC] when assets of a company are not delineated between current and non-current or Notes Receivable – Long-Term [ALTR] when reported as part of non-current assets)
+Receivables/dues from affiliates not considered as trade receivable and long-term (classified as Notes Receivable – Long-Term [ALTR])
+Receivables from or loans to employees/officers (classified as Receivables – Other [AORC] when assets of a company are not delineated between current and non-current or Notes Receivable – Long-Term [ALTR] when reported as part of non-current assets)
+Accrued interest income (classified as Receivables – Other [AORC] when assets of a company are not delineated between current and non-current or Notes Receivable – Long-Term [ALTR] when reported as part of non-current assets)
+Decommissioning trust funds (classified as LT Investments – Other [ALTI])
+Deposits/advances for equipment purchase (classified as Construction in Progress – Gross [ACPC])
+Deposits/advances for purchase of inventories when assets of a company are not delineated between current and non-current (classified as related inventory, such as Inventories – Finished Goods [AIFG] for merchandise, Inventories – Raw Materials [AIRM], or Inventories – Other [AIOT] when not specified to any specific inventory)
+Deposits with other banks when assets of a company are not delineated between current and non-current (classified as Cash [ACSH] or Cash & Cash Equivalents [ACAE])
+Deposits with other banks when assets of a company are not delineated between current and non-current (classified as Cash [ACSH] or Cash & Cash Equivalents [ACAE])
+Derivative assets/instruments/securities for hedging/interest rate swap when assets of a company are not delineated between current and non-current (classified as Long-Term Investments – Other [ALTI])
+Property held for resale (classified as Inventory – Finished Goods [AIFG] when assets of a company are not delineated between current and non-current for dealing properties, LT Investments – Other [ALTI] for non-dealing properties)
+Insurance-related receivables in insurance companies (classified as Insurance Receivables [APRE])
+Receivables in relation to claims for insurance (such as insurance claims receivable, or life insurance value receivable for employees) in non-insurance companies (classified as Receivables – Other [AORC] when assets of a company are not delineated between current and non-current or Notes Receivable – Long-Term [ALTR])
+Land for development in construction service and real estate operations companies (classified as Inventories – Raw Materials [AIRM] when reported as a part of inventories in the asset section)
+Land for development in companies other than construction services and real estate operations (classified as Construction in Progress [ACPC] when reported as a part of tangible fixed assets)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
