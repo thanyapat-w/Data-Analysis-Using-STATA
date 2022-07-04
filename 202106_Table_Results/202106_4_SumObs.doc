@@ -1,0 +1,227 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{\fs20\b\qc\line Number of firms and observations from 2011 to 2020}{\par}
+{\trowd\trautofit1
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx1000
+\fs20\pard\intbl\ql{\i }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\clftsWidth1\cellx2100
+\fs20\pard\intbl\qr{Overall  }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx3000
+\fs20\pard\intbl\qr{\i  }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx3900
+\fs20\pard\intbl\qr{US  }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx4800
+\fs20\pard\intbl\qr{\i  }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx5700
+\fs20\pard\intbl\qr{EU  }\cell
+\clbrdrb\brdrw25\brdrs\clbrdrt\brdrw10\brdrs\cellx6600
+\fs20\pard\intbl\qr{\i }\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Industry }\cell
+\cellx2100
+\fs20\pard\intbl\qr{Firms }\cell
+\cellx3000
+\fs20\pard\intbl\qr{Obs }\cell
+\cellx3900
+\fs20\pard\intbl\qr{Firms }\cell
+\cellx4800
+\fs20\pard\intbl\qr{Obs }\cell
+\cellx5700
+\fs20\pard\intbl\qr{Firms }\cell
+\cellx6600
+\fs20\pard\intbl\qr{Obs}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Basic Materials }\cell
+\cellx2100
+\fs20\pard\intbl\qr{154 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{829 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{97 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{552 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{57 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{277}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Consumer Cyclicals }\cell
+\cellx2100
+\fs20\pard\intbl\qr{433 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{2225 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{326 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{1701 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{107 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{524}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Consumer Non-Cyclicals }\cell
+\cellx2100
+\fs20\pard\intbl\qr{156 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{939 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{107 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{674 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{49 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{265}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Energy }\cell
+\cellx2100
+\fs20\pard\intbl\qr{99 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{415 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{67 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{270 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{32 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{145}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Financials }\cell
+\cellx2100
+\fs20\pard\intbl\qr{461 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{1934 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{379 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{1506 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{82 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{428}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Healthcare }\cell
+\cellx2100
+\fs20\pard\intbl\qr{469 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{1765 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{400 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{1483 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{69 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{282}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Industrials }\cell
+\cellx2100
+\fs20\pard\intbl\qr{458 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{2353 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{297 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{1582 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{161 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{771}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Technology }\cell
+\cellx2100
+\fs20\pard\intbl\qr{425 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{2026 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{351 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{1722 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{74 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{304}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Utilities }\cell
+\cellx2100
+\fs20\pard\intbl\qr{66 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{384 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{44 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{268 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{22 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{116}\cell
+\row}
+
+
+{\trowd\trgaph108\trleft-108
+\cellx1000
+\fs20\pard\intbl\ql{Total }\cell
+\cellx2100
+\fs20\pard\intbl\qr{2721 }\cell
+\cellx3000
+\fs20\pard\intbl\qr{12870 }\cell
+\cellx3900
+\fs20\pard\intbl\qr{2068 }\cell
+\cellx4800
+\fs20\pard\intbl\qr{9758 }\cell
+\cellx5700
+\fs20\pard\intbl\qr{653 }\cell
+\cellx6600
+\fs20\pard\intbl\qr{3112}\cell
+\row}
+
+
+\writepositionforappend
+{\trowd\trgaph108\trleft-108
+\clbrdrb\brdrw15\brdrs\cellx6600\cell
+\row}
+}}

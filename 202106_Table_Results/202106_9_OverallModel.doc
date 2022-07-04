@@ -1,0 +1,449 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{\b\qc\line Interaction-term regression: CRER with CEO on board }{\par}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw10\brdrs   \cellx2000
+\fs20\pard\intbl\qc { }\cell
+\clbrdrt\brdrw10\brdrs   \cellx3250
+\fs20\pard\intbl\qc {{(1)}}\cell
+\clbrdrt\brdrw10\brdrs   \cellx4550
+\fs20\pard\intbl\qc {{(2)}}\cell
+\clbrdrt\brdrw10\brdrs   \cellx5850
+\fs20\pard\intbl\qc {{(3)}}\cell
+\clbrdrt\brdrw10\brdrs   \cellx7150
+\fs20\pard\intbl\qc {{(4)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\clbrdrb\brdrw25\brdrs   \cellx2000
+\fs20\pard\intbl\qc { }\cell
+\clbrdrb\brdrw25\brdrs   \cellx3250
+\fs20\pard\intbl\qc { {TobinQ}}\cell
+\clbrdrb\brdrw25\brdrs   \cellx4550
+\fs20\pard\intbl\qc { {TobinQ}}\cell
+\clbrdrb\brdrw25\brdrs   \cellx5850
+\fs20\pard\intbl\qc { {TobinQ}}\cell
+\clbrdrb\brdrw25\brdrs   \cellx7150
+\fs20\pard\intbl\qc { {TobinQ}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {CRER}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{-.726}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.11}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{-.951}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.27}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(.171)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.832)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.072)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.602)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {1 = The CEO is a board member}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.346***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.221**}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.078}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{.048}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.006)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.379)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.573)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {1 =  Chairman was CEO in previous years}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.223***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.206***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.182***}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{.178***}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(0)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {CEOCompensation~R}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.025}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.017}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{-.064}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.043}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(.577)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.707)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.166)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.343)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {CRER_CEOBoardMe~r}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{-1.36*}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.872}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{-1.319*}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.84}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(.012)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.097)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.015)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.11)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {CRER_Chairmanis~O}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.015}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.125}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.027}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.114}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(.945)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.557)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.903)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.592)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {CRER_CEOCompens~R}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.662**}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.593**}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.711**}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{.626**}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(.002)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.005)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(.001)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(.003)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {FirmSize}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{-.35***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.286***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{-.322***}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.268***}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(0)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {FirmLeverage}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{-.002***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.002***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{-.002***}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{-.002***}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(0)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {_cons}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{9.81***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{7.775***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{9.629***}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{7.683***}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{(0)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {Observations}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{12870}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{12870}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{12870}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{12870}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {R-squared}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.128}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.186}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.133}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{.188}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql {{Industry FE}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{No}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{Yes}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{No}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{Yes}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql {{Country FE}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{No}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{ No}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{ Yes}}\cell
+\cellx7150
+\fs20\pard\intbl\qc {{ Yes}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw15\brdrs\cellx7150\i {p-values are in parentheses}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx7150
+\fs20\pard\intbl\ql \i {*** p<.001, ** p<.01, * p<.05 }\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx7150
+\fs20\pard\intbl\ql {}\cell
+\row}
+
+
+\writepositionforappend
+}}
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {8}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{1.217***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {9}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{-.063}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(.573)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {_cons}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{9.81***}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{7.775***}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{9.629***}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { { }}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{(0)}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{(0)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {Observations}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{12870}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{12870}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{12870}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql { {R-squared}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{.128}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{.186}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{.133}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql {{Industry FE}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{No}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{Yes}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{No}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2000
+\fs20\pard\intbl\ql {{Country FE}}\cell
+\cellx3250
+\fs20\pard\intbl\qc {{No}}\cell
+\cellx4550
+\fs20\pard\intbl\qc {{ No}}\cell
+\cellx5850
+\fs20\pard\intbl\qc {{ Yes}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw15\brdrs\cellx5850\i {p-values are in parentheses}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx5850
+\fs20\pard\intbl\ql \i {*** p<.001, ** p<.01, * p<.05 }\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx5850
+\fs20\pard\intbl\ql {}\cell
+\row}
+
+
+\writepositionforappend
+}}
